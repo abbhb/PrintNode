@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintToPDFNode", "PrintToPDFNode\PrintToPDFNode.csproj", "{93129F73-4D78-49C2-BB1E-D2723B1324EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintToPDFNode", "PrintToPDFNode\PrintToPDFNode.csproj", "{93129F73-4D78-49C2-BB1E-D2723B1324EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintToImage", "PrintToImage\PrintToImage.csproj", "{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{93129F73-4D78-49C2-BB1E-D2723B1324EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93129F73-4D78-49C2-BB1E-D2723B1324EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93129F73-4D78-49C2-BB1E-D2723B1324EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
