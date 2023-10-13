@@ -42,10 +42,10 @@ namespace PrintToPDFNode
             int pageCount = 0;
             string newFileName = TempFileUtil.tempPath + Path.GetRandomFileName()+".pdf";
             Console.WriteLine($"filename:{newFileName}");
-            
+
 
             // 初始化COM库
-
+            CoInitialize(IntPtr.Zero);
             // 创建Word应用程序对象
             var wordApp = new Word.Application();
 
@@ -64,8 +64,8 @@ namespace PrintToPDFNode
 
             // 退出Word应用程序
             wordApp.Quit();
-
             // 反初始化COM库
+            CoUninitialize();
             ToPdfResp resp = new()
             {
                 pdfPage = pageCount,
