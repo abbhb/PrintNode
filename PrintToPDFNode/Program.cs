@@ -19,6 +19,9 @@ if (File.Exists(configFilePath))
 
             Config.toPdfIp = configs.Ip;
             Config.toPdfTopic = configs.Topic;
+            Config.toPdfTopicR = configs.Rtopic;
+            Config.Accesskey = configs.Accesskey;
+            Config.Secretkey = configs.Secretkey;
         }
     }
     catch (Exception ex)
@@ -33,26 +36,24 @@ else
 
 TempFileUtil.isHavePath();
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//var app = builder.Build();
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//}
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
-//app.UseAuthorization();
+app.UseAuthorization();
 
-//app.MapControllers();
+app.MapControllers();
 
 // 转pdf监听,处理端只用监听req的消息
 RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toPdfTopic, Config.getToPdfTopicGroup(), Config.toPdfIp, ToPdfCallBack.successCallback, ToPdfCallBack.errorCallback,tags:"req");
@@ -60,4 +61,4 @@ rocketMQConsumer.start();
 
 //生产者
 RocketMQSendCenter.toPDFRespSend.Start();
-//app.Run();
+app.Run();

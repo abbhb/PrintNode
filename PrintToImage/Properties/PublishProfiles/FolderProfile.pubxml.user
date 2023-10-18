@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\C#\PrintNode\PrintToImage\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-10-18T07:17:17.0188110Z;True|2023-10-18T14:32:01.9014390+08:00;True|2023-10-18T14:29:21.7382502+08:00;True|2023-10-18T14:11:26.0399183+08:00;True|2023-10-18T14:11:21.0327605+08:00;True|2023-10-18T12:05:40.1919824+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintToPDFNode", "PrintToPDFNode\PrintToPDFNode.csproj", "{93129F73-4D78-49C2-BB1E-D2723B1324EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintToImage", "PrintToImage\PrintToImage.csproj", "{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintToImage", "PrintToImage\PrintToImage.csproj", "{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintNode", "PrintNode\PrintNode.csproj", "{FE19C63C-7970-41FB-8903-5F0967AD7C0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8611DE2-4C3D-4C1D-8F02-902B22AB2F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE19C63C-7970-41FB-8903-5F0967AD7C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE19C63C-7970-41FB-8903-5F0967AD7C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE19C63C-7970-41FB-8903-5F0967AD7C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE19C63C-7970-41FB-8903-5F0967AD7C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

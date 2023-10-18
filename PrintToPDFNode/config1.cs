@@ -6,5 +6,11 @@
         public string Ip { get; set; }
         public string Topic { get; set; }
 
+        public string Rtopic { get; set; }
+
+        public string Accesskey { get; set; }
+
+        public string Secretkey { get; set; }
+
     }
 }

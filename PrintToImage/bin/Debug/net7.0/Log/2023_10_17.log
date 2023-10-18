@@ -1,0 +1,176 @@
+﻿#Software: PrintToImage
+#ProcessID: 13520 x64
+#AppDomain: PrintToImage
+#FileName: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToImage
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.dll
+#ApplicationType: Console
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:00:28.3900000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+11:56:57.550  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+11:56:57.558  1 N - NewLife组件核心库 ©2002-2023 NewLife
+11:56:57.574  1 N - PrintToImage v1.0.0 Build 2000-01-01 .NET 7.0
+11:56:57.574  1 N - PrintToImage 
+11:56:57.574  1 N - 保存配置 D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\Config\Core.config
+11:56:57.575  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+11:56:57.575  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+11:56:57.690  1 N - [_group]正在准备消费 print_pdf_toimage_send_msg
+11:56:57.698  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+11:56:57.701  1 N - [print_pdf_toimage_send_msg]集群地址：tcp://192.168.12.12:9876
+11:56:57.702  1 N - [print_pdf_toimage_send_msg]正在连接[tcp://192.168.12.12:9876]
+11:56:57.704  1 N - 保存配置 D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\Config\Socket.config
+11:56:57.729  1 N - Tcp.Open tcp://0.0.0.0:1778=>192.168.12.12:9876
+11:56:57.808  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:56:57.814  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintToImage
+#ProcessID: 31152 x64
+#AppDomain: PrintToImage
+#FileName: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToImage
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.dll
+#ApplicationType: Console
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:00:51.9060000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+11:57:21.054  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+11:57:21.062  1 N - NewLife组件核心库 ©2002-2023 NewLife
+11:57:21.073  1 N - PrintToImage v1.0.0 Build 2000-01-01 .NET 7.0
+11:57:21.073  1 N - PrintToImage 
+11:57:21.073  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+11:57:21.073  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+11:57:21.266  1 N - [_group]正在准备消费 print_pdf_toimage_send_msg
+11:57:21.273  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+11:57:21.279  1 N - [print_pdf_toimage_send_msg]集群地址：tcp://192.168.12.12:9876
+11:57:21.280  1 N - [print_pdf_toimage_send_msg]正在连接[tcp://192.168.12.12:9876]
+11:57:21.310  1 N - Tcp.Open tcp://0.0.0.0:1903=>192.168.12.12:9876
+11:57:21.405  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:57:21.410  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintToImage
+#ProcessID: 4384 x64
+#AppDomain: PrintToImage
+#FileName: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToImage
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:01:04.8590000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+11:57:34.014  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+11:57:34.016  1 N - NewLife组件核心库 ©2002-2023 NewLife
+11:57:34.016  1 N - PrintToImage v1.0.0 Build 2000-01-01 .NET 7.0
+11:57:34.016  1 N - PrintToImage 
+11:57:34.016  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+11:57:34.016  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+11:57:34.220  1 N - [_group]正在准备消费 print_pdf_toimage_send_msg
+11:57:34.235  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+11:57:34.241  1 N - [print_pdf_toimage_send_msg]集群地址：tcp://192.168.12.12:9876
+11:57:34.242  1 N - [print_pdf_toimage_send_msg]正在连接[tcp://192.168.12.12:9876]
+11:57:34.265  1 N - Tcp.Open tcp://0.0.0.0:1920=>192.168.12.12:9876
+11:57:34.330  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:57:34.334  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:57:34.436  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+11:57:34.554  6 Y T [_group]SYSTEM_ERROR: no consumer for this group
+11:57:34.570  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+11:57:34.580  8 Y T [_group]消费者列表[1]：192.168.12.36@4384
+11:57:34.596  8 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+11:57:34.660  4 Y P [_group]初始化offset[broker-a@0] Offset=0
+11:57:34.670 10 Y P [_group]初始化offset[broker-a@1] Offset=0
+11:57:34.710  6 Y P [_group]初始化offset[broker-a@2] Offset=0
+11:57:34.716  9 Y P [_group]初始化offset[broker-a@3] Offset=0
+11:57:34.719  4 Y P [_group]初始化offset[broker-a@4] Offset=0
+11:57:34.727  4 Y P [_group]初始化offset[broker-a@5] Offset=0
+11:57:34.730  4 Y P [_group]初始化offset[broker-a@6] Offset=0
+11:57:34.736  4 Y P [_group]初始化offset[broker-a@7] Offset=0
+11:57:34.744  9 Y P [_group]初始化offset[broker-a@8] Offset=0
+11:57:34.751  9 Y P [_group]初始化offset[broker-a@9] Offset=0
+11:57:34.757  9 Y P [_group]初始化offset[broker-a@10] Offset=0
+11:57:34.765  9 Y P [_group]初始化offset[broker-a@11] Offset=0
+11:57:34.771  6 Y P [_group]初始化offset[broker-a@12] Offset=0
+11:57:34.778  4 Y P [_group]初始化offset[broker-a@13] Offset=0
+11:57:34.785 10 Y P [_group]初始化offset[broker-a@14] Offset=0
+11:57:34.787  6 Y P [_group]初始化offset[broker-a@15] Offset=0
+11:58:04.293  6 Y T [print_pdf_toimage_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintToImage
+#ProcessID: 19448 x64
+#AppDomain: PrintToImage
+#FileName: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToImage
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToImage\bin\Debug\net7.0\PrintToImage.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:09:39.2500000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+12:06:08.431  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+12:06:08.433  1 N - NewLife组件核心库 ©2002-2023 NewLife
+12:06:08.433  1 N - PrintToImage v1.0.0 Build 2000-01-01 .NET 7.0
+12:06:08.434  1 N - PrintToImage 
+12:06:08.434  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+12:06:08.434  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+12:06:08.575  1 N - [_group]正在准备消费 print_pdf_toimage_send_msg
+12:06:08.582  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+12:06:08.586  1 N - [print_pdf_toimage_send_msg]集群地址：tcp://192.168.12.12:9876
+12:06:08.587  1 N - [print_pdf_toimage_send_msg]正在连接[tcp://192.168.12.12:9876]
+12:06:08.608  1 N - Tcp.Open tcp://0.0.0.0:2259=>192.168.12.12:9876
+12:06:08.670  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+12:06:08.674  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+12:06:08.780  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+12:06:08.820  8 Y T [_group]SYSTEM_ERROR: no consumer for this group
+12:06:08.925  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+12:06:08.936  8 Y T [_group]消费者列表[1]：192.168.12.36@19448
+12:06:08.939  8 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+12:06:08.950  6 Y P [_group]初始化offset[broker-a@0] Offset=0
+12:06:08.955  9 Y P [_group]初始化offset[broker-a@1] Offset=0
+12:06:08.956  9 Y P [_group]初始化offset[broker-a@2] Offset=0
+12:06:08.957  9 Y P [_group]初始化offset[broker-a@3] Offset=0
+12:06:08.962  9 Y P [_group]初始化offset[broker-a@4] Offset=0
+12:06:08.963  4 Y P [_group]初始化offset[broker-a@5] Offset=0
+12:06:08.969  4 Y P [_group]初始化offset[broker-a@6] Offset=0
+12:06:08.969  4 Y P [_group]初始化offset[broker-a@7] Offset=2
+12:06:08.970  9 Y P [_group]初始化offset[broker-a@8] Offset=0
+12:06:08.971  9 Y P [_group]初始化offset[broker-a@9] Offset=0
+12:06:08.972  9 Y P [_group]初始化offset[broker-a@10] Offset=0
+12:06:08.972  6 Y P [_group]初始化offset[broker-a@11] Offset=0
+12:06:08.972  6 Y P [_group]初始化offset[broker-a@12] Offset=1
+12:06:08.972  6 Y P [_group]初始化offset[broker-a@13] Offset=1
+12:06:08.973  9 Y P [_group]初始化offset[broker-a@14] Offset=0
+12:06:08.974  4 Y P [_group]初始化offset[broker-a@15] Offset=0

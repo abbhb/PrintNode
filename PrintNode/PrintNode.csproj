@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	<ItemGroup>
+		
+		<COMReference Include="Acrobat">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>1</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>e64169b3-3592-47d2-816e-602c5c13f328</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcroPDFLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>05bfd3f1-6319-4f30-b752-c7a22889bcc4</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="FileViewLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>a4214abb-6c96-4566-accb-9a6767afb285</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AdobePDFMakerForOffice">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>ea8d486a-09e6-411f-b452-78f075acc8cc</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AdobePDFMakerX">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>cbd71df4-5aed-11d2-bc74-0060979c3633</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="ACTIVEXLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>012f24c1-35b0-11d0-bf2d-0000e8d0d146</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PMCObjLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>a1b0de63-7454-4184-b5b6-6acfdac5c9a6</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PrinterExtensionLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>91ce54ee-c67c-4b46-a4ff-99416f27a8bf</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>4</VersionMinor>
+		  <VersionMajor>2</VersionMajor>
+		  <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+		</COMReference>
+		<COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>4</VersionMinor>
+		  <VersionMajor>2</VersionMajor>
+		  <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+		</COMReference>
+	</ItemGroup>
+  <ItemGroup>
+	  <PackageReference Include="itext7" Version="8.0.1" />
+	  <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+	  <PackageReference Include="NewLife.RocketMQ" Version="2.5.2023.904" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="PdfiumViewer" Version="2.13.0" />
+	  <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.32" />
+	  <PackageReference Include="NLog.Extensions.Logging" Version="5.3.4" />
+	  <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+	  <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
+	  <PackageReference Include="YamlDotNet" Version="13.7.0" />
+  </ItemGroup>
+
+</Project>

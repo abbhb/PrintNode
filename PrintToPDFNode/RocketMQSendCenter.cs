@@ -7,8 +7,13 @@ namespace PrintToPDFNode
     {
         public static Producer toPDFRespSend = new Producer()
         {
-            Topic = Config.toPdfTopic,
+            Topic = Config.toPdfTopicR,
             NameServerAddress = Config.toPdfIp,
+            AclOptions = new AclOptions()
+            {
+                AccessKey = Config.Accesskey,
+                SecretKey = Config.Secretkey,
+            }
         };
     }
 }

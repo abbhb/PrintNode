@@ -1,0 +1,143 @@
+﻿#Software: PrintToPDFNode
+#ProcessID: 29684 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:03:17.2180000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+11:59:46.392  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+11:59:46.395  1 N - NewLife组件核心库 ©2002-2023 NewLife
+11:59:46.395  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+11:59:46.395  1 N - PrintToPDFNode 
+11:59:46.395  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+11:59:46.395  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+11:59:46.550  1 N - [_group]正在准备消费 print_filetopdf_send_msg
+11:59:46.552  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+11:59:46.557  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+11:59:46.558  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+11:59:46.582  1 N - Tcp.Open tcp://0.0.0.0:1977=>192.168.12.12:9876
+11:59:46.629  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:59:46.633  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+11:59:46.746  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+11:59:46.764  4 Y T [_group]SYSTEM_ERROR: no consumer for this group
+11:59:46.855  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+11:59:46.857  9 Y T [_group]消费者列表[1]：192.168.12.36@29684
+11:59:46.861  9 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+11:59:46.874  6 Y P [_group]初始化offset[broker-a@0] Offset=0
+11:59:46.876  6 Y P [_group]初始化offset[broker-a@1] Offset=0
+11:59:46.877  6 Y P [_group]初始化offset[broker-a@2] Offset=0
+11:59:46.879 14 Y P [_group]初始化offset[broker-a@3] Offset=-1
+11:59:46.880 14 Y P [_group]初始化offset[broker-a@4] Offset=-1
+11:59:46.880 14 Y P [_group]初始化offset[broker-a@5] Offset=1
+11:59:46.881 14 Y P [_group]初始化offset[broker-a@6] Offset=-1
+11:59:46.881 14 Y P [_group]初始化offset[broker-a@7] Offset=1
+11:59:46.881 14 Y P [_group]初始化offset[broker-a@8] Offset=1
+11:59:46.881 14 Y P [_group]初始化offset[broker-a@9] Offset=2
+11:59:46.882 14 Y P [_group]初始化offset[broker-a@10] Offset=-1
+11:59:46.883  6 Y P [_group]初始化offset[broker-a@11] Offset=-1
+11:59:46.883  6 Y P [_group]初始化offset[broker-a@12] Offset=-1
+11:59:46.884  6 Y P [_group]初始化offset[broker-a@13] Offset=-1
+11:59:46.885  6 Y P [_group]初始化offset[broker-a@14] Offset=-1
+11:59:46.886  4 Y P [_group]初始化offset[broker-a@15] Offset=-1
+11:59:46.959 20 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@13] Offset=-1, NextOffset=0
+11:59:46.959 27 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@2] Offset=0, NextOffset=1
+11:59:46.959 28 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@0] Offset=0, NextOffset=2
+11:59:46.959 23 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@4] Offset=-1, NextOffset=0
+11:59:46.959 25 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@3] Offset=-1, NextOffset=0
+11:59:46.959 26 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@15] Offset=-1, NextOffset=0
+11:59:46.959 17 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@1] Offset=0, NextOffset=1
+11:59:46.960 30 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@14] Offset=-1, NextOffset=0
+12:00:02.082  9 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@6] Offset=-1, NextOffset=0
+12:00:02.082 28 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@11] Offset=-1, NextOffset=0
+12:00:02.083 28 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@10] Offset=-1, NextOffset=0
+12:00:02.083  8 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@12] Offset=-1, NextOffset=0
+12:00:16.586  4 Y T [print_filetopdf_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+12:04:51.492 50 Y P System.ArgumentNullException: Value cannot be null. (Parameter 'uriString')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Uri..ctor(String uriString)
+   at PrintToPDFNode.TempFileUtil.GetUrlName(String url) in D:\C#\PrintNode\PrintToPDFNode\TempFileUtil.cs:line 31
+   at PrintToPDFNode.TempFileUtil.saveFileByUrl(String url) in D:\C#\PrintNode\PrintToPDFNode\TempFileUtil.cs:line 39
+   at PrintToPDFNode.ToPdfCallBack.<>c.<<-cctor>b__4_0>d.MoveNext() in D:\C#\PrintNode\PrintToPDFNode\ToPdfCallBack.cs:line 32
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+12:04:51.533 50 Y P 异常退出！
+
+#Software: PrintToPDFNode
+#ProcessID: 27720 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 2.00:08:28.0780000
+#Date: 2023-10-17
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+12:04:57.257  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+12:04:57.259  1 N - NewLife组件核心库 ©2002-2023 NewLife
+12:04:57.260  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+12:04:57.260  1 N - PrintToPDFNode 
+12:04:57.260  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+12:04:57.260  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+12:04:57.404  1 N - [_group]正在准备消费 print_filetopdf_send_msg
+12:04:57.406  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+12:04:57.411  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+12:04:57.413  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+12:04:57.436  1 N - Tcp.Open tcp://0.0.0.0:2233=>192.168.12.12:9876
+12:04:57.484  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+12:04:57.489  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+12:04:57.597  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+12:04:57.627  4 Y T [_group]SYSTEM_ERROR: no consumer for this group
+12:04:57.722  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+12:04:57.723  4 Y T [_group]消费者列表[1]：192.168.12.36@27720
+12:04:57.727  4 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+12:04:57.738 10 Y P [_group]初始化offset[broker-a@0] Offset=0
+12:04:57.739  6 Y P [_group]初始化offset[broker-a@1] Offset=0
+12:04:57.740  9 Y P [_group]初始化offset[broker-a@2] Offset=0
+12:04:57.741  6 Y P [_group]初始化offset[broker-a@3] Offset=-1
+12:04:57.742  6 Y P [_group]初始化offset[broker-a@4] Offset=-1
+12:04:57.742  6 Y P [_group]初始化offset[broker-a@5] Offset=1
+12:04:57.742  9 Y P [_group]初始化offset[broker-a@6] Offset=-1
+12:04:57.742  9 Y P [_group]初始化offset[broker-a@7] Offset=1
+12:04:57.742  9 Y P [_group]初始化offset[broker-a@8] Offset=1
+12:04:57.742  9 Y P [_group]初始化offset[broker-a@9] Offset=2
+12:04:57.743  6 Y P [_group]初始化offset[broker-a@10] Offset=-1
+12:04:57.743  8 Y P [_group]初始化offset[broker-a@11] Offset=-1
+12:04:57.743  8 Y P [_group]初始化offset[broker-a@12] Offset=1
+12:04:57.744  6 Y P [_group]初始化offset[broker-a@13] Offset=-1
+12:04:57.745  8 Y P [_group]初始化offset[broker-a@14] Offset=-1
+12:04:57.745  6 Y P [_group]初始化offset[broker-a@15] Offset=-1
+12:04:57.803 29 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@13] Offset=-1, NextOffset=0
+12:04:57.804  9 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@2] Offset=0, NextOffset=1
+12:04:57.804  8 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@0] Offset=0, NextOffset=2
+12:04:57.803 28 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@14] Offset=-1, NextOffset=0
+12:04:57.804 19 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@3] Offset=-1, NextOffset=0
+12:04:57.804 26 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@4] Offset=-1, NextOffset=0
+12:04:57.804 30 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@15] Offset=-1, NextOffset=0
+12:04:57.805 27 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@6] Offset=-1, NextOffset=0
+12:04:57.805 22 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@10] Offset=-1, NextOffset=0
+12:05:12.960  4 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@1] Offset=0, NextOffset=1
+12:05:12.960  4 Y P [_group]无效的offset，可能历史消息已过期 [broker-a@11] Offset=-1, NextOffset=0

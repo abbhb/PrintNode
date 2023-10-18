@@ -27,7 +27,11 @@ namespace PrintToPDFNode
                 Topic = topic,
                 Group = topic_group,
                 NameServerAddress = nameServerAddress,
-                //设置每次接收消息只拉取一条信息
+                AclOptions = new AclOptions()
+                {
+                    AccessKey= Config.Accesskey,
+                    SecretKey= Config.Secretkey,
+                },
                 BatchSize = batchSize,
                 //FromLastOffset = true,
                 //SkipOverStoredMsgCount = 0,

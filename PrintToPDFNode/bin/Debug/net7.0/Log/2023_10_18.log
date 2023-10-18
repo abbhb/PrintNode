@@ -1,0 +1,408 @@
+﻿#Software: PrintToPDFNode
+#ProcessID: 9788 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 3.04:37:01.9060000
+#Date: 2023-10-18
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+16:33:31.088  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+16:33:31.090  1 N - NewLife组件核心库 ©2002-2023 NewLife
+16:33:31.090  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+16:33:31.091  1 N - PrintToPDFNode 
+16:33:31.091  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+16:33:31.091  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+16:33:31.210  1 N - [_group]正在准备消费 print_filetopdf_send_msg
+16:33:31.211  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+16:33:31.215  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+16:33:31.216  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+16:33:31.232  1 N - Tcp.Open tcp://0.0.0.0:11555=>192.168.12.12:9876
+16:33:31.277  1 N - 发现Broker[broker-a]: 192.168.12.12:admin:aizhineng1404:10911, reads=16, writes=16
+16:33:31.281  1 N - 发现Broker[broker-a]: 192.168.12.12:admin:aizhineng1404:10911, reads=16, writes=16
+16:33:31.382  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:31.423  8 Y T [_group]不知道这样的主机。
+16:33:32.415  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:32.416  8 Y T [_group]不知道这样的主机。
+16:33:33.435  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:33.440  9 Y T [_group]不知道这样的主机。
+16:33:34.440  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:34.445  9 Y T [_group]不知道这样的主机。
+16:33:35.455  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:35.456  9 Y T [_group]不知道这样的主机。
+16:33:36.468  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:36.469  9 Y T [_group]不知道这样的主机。
+16:33:37.480  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:37.481  9 Y T [_group]不知道这样的主机。
+16:33:38.493  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:38.494  8 Y T [_group]不知道这样的主机。
+16:33:39.492  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:39.493  8 Y T [_group]不知道这样的主机。
+16:33:40.498  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:40.500  8 Y T [_group]不知道这样的主机。
+16:33:41.509  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:41.510  8 Y T [_group]不知道这样的主机。
+16:33:42.515  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:42.516  8 Y T [_group]不知道这样的主机。
+16:33:43.519  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:43.522  9 Y T [_group]不知道这样的主机。
+16:33:44.531  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:44.532  8 Y T [_group]不知道这样的主机。
+16:33:45.547  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:45.548  8 Y T [_group]不知道这样的主机。
+16:33:46.557  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:46.559  4 Y T [_group]不知道这样的主机。
+16:33:47.574  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:47.578  4 Y T [_group]不知道这样的主机。
+16:33:48.581  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:48.582  4 Y T [_group]不知道这样的主机。
+16:33:49.609  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:49.612  4 Y T [_group]不知道这样的主机。
+16:33:50.625  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:50.629  4 Y T [_group]不知道这样的主机。
+16:33:51.653  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:51.654  4 Y T [_group]不知道这样的主机。
+16:33:52.653  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:52.654  4 Y T [_group]不知道这样的主机。
+16:33:53.665  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:53.667  6 Y T [_group]不知道这样的主机。
+16:33:54.677  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:54.678  6 Y T [_group]不知道这样的主机。
+16:33:55.693  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:55.697  6 Y T [_group]不知道这样的主机。
+16:33:56.709  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:56.714  6 Y T [_group]不知道这样的主机。
+16:33:57.726  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:57.728  8 Y T [_group]不知道这样的主机。
+16:33:58.729  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:58.730  8 Y T [_group]不知道这样的主机。
+16:33:59.744  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:33:59.745  8 Y T [_group]不知道这样的主机。
+16:34:00.746  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:00.749  8 Y T [_group]不知道这样的主机。
+16:34:01.236  4 Y T [print_filetopdf_send_msg]发现Broker[broker-a]: 192.168.12.12:admin:aizhineng1404:10911, reads=16, writes=16
+16:34:01.742  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:01.743  9 Y T [_group]不知道这样的主机。
+16:34:02.754  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:02.755  9 Y T [_group]不知道这样的主机。
+16:34:03.768  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:03.772  4 Y T [_group]不知道这样的主机。
+16:34:04.798  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:04.802  8 Y T [_group]不知道这样的主机。
+16:34:05.815  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:05.816  9 Y T [_group]不知道这样的主机。
+16:34:06.827  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:06.828  9 Y T [_group]不知道这样的主机。
+16:34:07.833  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:07.834  4 Y T [_group]不知道这样的主机。
+16:34:08.836  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:08.840  4 Y T [_group]不知道这样的主机。
+16:34:09.849  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:09.852  8 Y T [_group]不知道这样的主机。
+16:34:10.876  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:10.877  4 Y T [_group]不知道这样的主机。
+16:34:11.892  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:11.895  4 Y T [_group]不知道这样的主机。
+16:34:12.907  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:12.908  6 Y T [_group]不知道这样的主机。
+16:34:13.918  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:13.919  6 Y T [_group]不知道这样的主机。
+16:34:14.916  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:14.917  6 Y T [_group]不知道这样的主机。
+16:34:15.919  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:15.920  4 Y T [_group]不知道这样的主机。
+16:34:16.930  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:16.932  4 Y T [_group]不知道这样的主机。
+16:34:17.932  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:17.933  8 Y T [_group]不知道这样的主机。
+16:34:18.931  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:18.932  8 Y T [_group]不知道这样的主机。
+16:34:19.949  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:19.950  8 Y T [_group]不知道这样的主机。
+16:34:20.947  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:20.948  8 Y T [_group]不知道这样的主机。
+16:34:21.956  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:21.957  4 Y T [_group]不知道这样的主机。
+16:34:22.972  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:22.973  4 Y T [_group]不知道这样的主机。
+16:34:23.985  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:23.986  4 Y T [_group]不知道这样的主机。
+16:34:24.994  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:24.995  6 Y T [_group]不知道这样的主机。
+16:34:26.006  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:26.008  6 Y T [_group]不知道这样的主机。
+16:34:27.015  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:27.016  6 Y T [_group]不知道这样的主机。
+16:34:28.010  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:28.011  6 Y T [_group]不知道这样的主机。
+16:34:29.026  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:29.027  6 Y T [_group]不知道这样的主机。
+16:34:30.032  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:30.032  8 Y T [_group]不知道这样的主机。
+16:34:31.026  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:31.028  8 Y T [_group]不知道这样的主机。
+16:34:32.023  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:32.024  8 Y T [_group]不知道这样的主机。
+16:34:33.036  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:33.037  8 Y T [_group]不知道这样的主机。
+16:34:34.052  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:34.053  8 Y T [_group]不知道这样的主机。
+16:34:35.059  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:35.060  8 Y T [_group]不知道这样的主机。
+16:34:36.076  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:36.077  8 Y T [_group]不知道这样的主机。
+16:34:37.079  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:37.080  4 Y T [_group]不知道这样的主机。
+16:34:38.075  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:38.077  4 Y T [_group]不知道这样的主机。
+16:34:39.084  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:39.085  8 Y T [_group]不知道这样的主机。
+16:34:40.108  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:40.109  8 Y T [_group]不知道这样的主机。
+16:34:41.106  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:41.107  9 Y T [_group]不知道这样的主机。
+16:34:42.104  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:42.105  9 Y T [_group]不知道这样的主机。
+16:34:43.116  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:43.117  9 Y T [_group]不知道这样的主机。
+16:34:44.129  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:44.130  8 Y T [_group]不知道这样的主机。
+16:34:45.156  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:45.157  8 Y T [_group]不知道这样的主机。
+16:34:46.152  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:46.153  8 Y T [_group]不知道这样的主机。
+16:34:47.145  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:47.146  8 Y T [_group]不知道这样的主机。
+16:34:48.157  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:48.159  8 Y T [_group]不知道这样的主机。
+16:34:49.170  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:49.171  9 Y T [_group]不知道这样的主机。
+16:34:50.169  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:50.170  9 Y T [_group]不知道这样的主机。
+16:34:51.181  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:51.182  4 Y T [_group]不知道这样的主机。
+16:34:52.197  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:52.198  4 Y T [_group]不知道这样的主机。
+16:34:53.209  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:53.211  4 Y T [_group]不知道这样的主机。
+16:34:54.234  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:54.235  9 Y T [_group]不知道这样的主机。
+16:34:55.247  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:55.250  9 Y T [_group]不知道这样的主机。
+16:34:56.250  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:56.251  8 Y T [_group]不知道这样的主机。
+16:34:57.261  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:57.261  8 Y T [_group]不知道这样的主机。
+16:34:58.277  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:58.278  8 Y T [_group]不知道这样的主机。
+16:34:59.286  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:34:59.288  9 Y T [_group]不知道这样的主机。
+16:35:00.285  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:00.287  9 Y T [_group]不知道这样的主机。
+16:35:01.299  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:01.303  4 Y T [_group]不知道这样的主机。
+16:35:02.315  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:02.319  6 Y T [_group]不知道这样的主机。
+16:35:03.340  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:03.342  8 Y T [_group]不知道这样的主机。
+16:35:04.351  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:04.353  9 Y T [_group]不知道这样的主机。
+16:35:05.351  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:05.352  9 Y T [_group]不知道这样的主机。
+16:35:06.364  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:06.367  9 Y T [_group]不知道这样的主机。
+16:35:07.377  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:07.380  9 Y T [_group]不知道这样的主机。
+16:35:08.393  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:08.394  9 Y T [_group]不知道这样的主机。
+16:35:09.406  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:09.407  4 Y T [_group]不知道这样的主机。
+16:35:10.418  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:10.419  8 Y T [_group]不知道这样的主机。
+16:35:11.410  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:11.412  6 Y T [_group]不知道这样的主机。
+16:35:12.437  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:12.440  4 Y T [_group]不知道这样的主机。
+16:35:13.448  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:13.450  8 Y T [_group]不知道这样的主机。
+16:35:14.463  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:14.464  8 Y T [_group]不知道这样的主机。
+16:35:15.463  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:15.466  4 Y T [_group]不知道这样的主机。
+16:35:16.473  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:16.475  4 Y T [_group]不知道这样的主机。
+16:35:17.487  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:17.489  4 Y T [_group]不知道这样的主机。
+16:35:18.516  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:18.518  8 Y T [_group]不知道这样的主机。
+16:35:19.526  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:19.528  8 Y T [_group]不知道这样的主机。
+16:35:20.526  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:20.527  4 Y T [_group]不知道这样的主机。
+16:35:21.522  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:21.524  4 Y T [_group]不知道这样的主机。
+16:35:22.533  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:22.534  4 Y T [_group]不知道这样的主机。
+16:35:23.534  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:23.536  4 Y T [_group]不知道这样的主机。
+16:35:24.546  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:24.549  8 Y T [_group]不知道这样的主机。
+16:35:25.557  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:25.558  8 Y T [_group]不知道这样的主机。
+16:35:26.565  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:26.566  8 Y T [_group]不知道这样的主机。
+16:35:27.571  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:27.572  8 Y T [_group]不知道这样的主机。
+16:35:28.581  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:28.582  8 Y T [_group]不知道这样的主机。
+16:35:29.610  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:29.611  8 Y T [_group]不知道这样的主机。
+16:35:30.612  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:30.613  8 Y T [_group]不知道这样的主机。
+16:35:31.638  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:31.641  8 Y T [_group]不知道这样的主机。
+16:35:32.652  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:32.653  8 Y T [_group]不知道这样的主机。
+16:35:33.648  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:33.651  8 Y T [_group]不知道这样的主机。
+16:35:34.674  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:34.675  4 Y T [_group]不知道这样的主机。
+16:35:35.684  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:35.685  8 Y T [_group]不知道这样的主机。
+16:35:36.693  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:36.694  8 Y T [_group]不知道这样的主机。
+16:35:37.709  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:37.710  8 Y T [_group]不知道这样的主机。
+16:35:38.707  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:38.708  8 Y T [_group]不知道这样的主机。
+16:35:39.715  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:39.716  8 Y T [_group]不知道这样的主机。
+16:35:40.711  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:40.713  9 Y T [_group]不知道这样的主机。
+16:35:41.735  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:41.736  8 Y T [_group]不知道这样的主机。
+16:35:42.748  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:42.749  4 Y T [_group]不知道这样的主机。
+16:35:43.746  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:43.747  4 Y T [_group]不知道这样的主机。
+16:35:44.744  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:44.745  4 Y T [_group]不知道这样的主机。
+16:35:45.746  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:45.749  4 Y T [_group]不知道这样的主机。
+16:35:46.745  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:46.746  6 Y T [_group]不知道这样的主机。
+16:35:47.743  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:47.744  6 Y T [_group]不知道这样的主机。
+16:35:48.748  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:48.749  4 Y T [_group]不知道这样的主机。
+16:35:49.759  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:49.762  4 Y T [_group]不知道这样的主机。
+16:35:50.768  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:50.769  8 Y T [_group]不知道这样的主机。
+16:35:51.777  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:51.778  9 Y T [_group]不知道这样的主机。
+16:35:52.783  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:52.784  9 Y T [_group]不知道这样的主机。
+16:35:53.790  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:53.791  8 Y T [_group]不知道这样的主机。
+16:35:54.791  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:54.793  9 Y T [_group]不知道这样的主机。
+16:35:55.797  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:55.798  8 Y T [_group]不知道这样的主机。
+16:35:56.789  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:56.790  9 Y T [_group]不知道这样的主机。
+16:35:57.800  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:57.801  9 Y T [_group]不知道这样的主机。
+16:35:58.818  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:58.819  9 Y T [_group]不知道这样的主机。
+16:35:59.830  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:35:59.831  9 Y T [_group]不知道这样的主机。
+16:36:00.845  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:36:00.846  8 Y T [_group]不知道这样的主机。
+16:36:01.286  9 Y T [print_filetopdf_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+16:36:01.837  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:36:01.854  9 Y T [_group]SYSTEM_ERROR: no consumer for this group
+16:36:01.961  4 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:36:01.965  4 Y T [_group]消费者列表[1]：192.168.12.36@9788
+16:36:01.968  4 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+16:36:01.991  8 Y P [_group]初始化offset[broker-a@0] Offset=7
+16:36:01.991  8 Y P [_group]初始化offset[broker-a@1] Offset=4
+16:36:01.991  8 Y P [_group]初始化offset[broker-a@2] Offset=2
+16:36:01.991  8 Y P [_group]初始化offset[broker-a@3] Offset=2
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@4] Offset=0
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@5] Offset=1
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@6] Offset=1
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@7] Offset=1
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@8] Offset=1
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@9] Offset=4
+16:36:01.995  8 Y P [_group]初始化offset[broker-a@10] Offset=1
+16:36:01.997  8 Y P [_group]初始化offset[broker-a@11] Offset=0
+16:36:01.997  8 Y P [_group]初始化offset[broker-a@12] Offset=1
+16:36:01.997  8 Y P [_group]初始化offset[broker-a@13] Offset=3
+16:36:01.997  8 Y P [_group]初始化offset[broker-a@14] Offset=1
+16:36:01.997  8 Y P [_group]初始化offset[broker-a@15] Offset=2
+
+#Software: PrintToPDFNode
+#ProcessID: 22052 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 3.04:39:45.2650000
+#Date: 2023-10-18
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+16:36:14.454  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+16:36:14.456  1 N - NewLife组件核心库 ©2002-2023 NewLife
+16:36:14.457  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+16:36:14.457  1 N - PrintToPDFNode 
+16:36:14.457  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+16:36:14.457  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+16:36:14.612  1 N - [_group]正在准备消费 print_filetopdf_send_msg
+16:36:14.613  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+16:36:14.616  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+16:36:14.618  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+16:36:14.633  1 N - Tcp.Open tcp://0.0.0.0:11837=>192.168.12.12:9876
+16:36:14.671  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+16:36:14.675  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+16:36:14.775  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:36:14.790  8 Y T [_group]SYSTEM_ERROR: no consumer for this group
+16:36:14.889  6 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+16:36:14.894  6 Y T [_group]消费者列表[1]：192.168.12.36@22052
+16:36:14.897  6 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+16:36:14.906  4 Y P [_group]初始化offset[broker-a@0] Offset=7
+16:36:14.906  4 Y P [_group]初始化offset[broker-a@1] Offset=4
+16:36:14.906  4 Y P [_group]初始化offset[broker-a@2] Offset=2
+16:36:14.906  4 Y P [_group]初始化offset[broker-a@3] Offset=2
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@4] Offset=0
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@5] Offset=1
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@6] Offset=1
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@7] Offset=1
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@8] Offset=1
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@9] Offset=4
+16:36:14.909  9 Y P [_group]初始化offset[broker-a@10] Offset=1
+16:36:14.911  9 Y P [_group]初始化offset[broker-a@11] Offset=0
+16:36:14.911  9 Y P [_group]初始化offset[broker-a@12] Offset=1
+16:36:14.911  9 Y P [_group]初始化offset[broker-a@13] Offset=3
+16:36:14.911  9 Y P [_group]初始化offset[broker-a@14] Offset=1
+16:36:14.911  9 Y P [_group]初始化offset[broker-a@15] Offset=2
+16:36:44.660  8 Y T [print_filetopdf_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16

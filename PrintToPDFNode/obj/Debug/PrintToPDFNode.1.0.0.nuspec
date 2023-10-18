@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PrintToPDFNode</id>
+    <version>1.0.0</version>
+    <authors>PrintToPDFNode</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="Microsoft.AspNetCore.OpenApi" version="7.0.11" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Console" version="3.1.32" exclude="Build,Analyzers" />
+        <dependency id="NLog.Extensions.Logging" version="5.3.4" exclude="Build,Analyzers" />
+        <dependency id="NewLife.RocketMQ" version="2.5.2023.904" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore" version="6.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.InteropServices.WindowsRuntime" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="YamlDotNet" version="13.7.0" exclude="Build,Analyzers" />
+        <dependency id="iTextSharp" version="5.5.13.3" exclude="Build,Analyzers" />
+        <dependency id="itext7" version="8.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net7.0/appsettings.Development.json" buildAction="Content" />
+      <files include="any/net7.0/appsettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.runtimeconfig.json" target="lib\net7.0\PrintToPDFNode.runtimeconfig.json" />
+    <file src="D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll" target="lib\net7.0\PrintToPDFNode.dll" />
+    <file src="D:\C#\PrintNode\PrintToPDFNode\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="D:\C#\PrintNode\PrintToPDFNode\appsettings.Development.json" target="contentFiles\any\net7.0\appsettings.Development.json" />
+    <file src="D:\C#\PrintNode\PrintToPDFNode\appsettings.json" target="content\appsettings.json" />
+    <file src="D:\C#\PrintNode\PrintToPDFNode\appsettings.json" target="contentFiles\any\net7.0\appsettings.json" />
+  </files>
+</package>
