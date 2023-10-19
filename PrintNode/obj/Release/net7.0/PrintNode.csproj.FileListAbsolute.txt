@@ -68,3 +68,7 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\refint\PrintNode.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\PrintNode.pdb
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\PrintNode.genruntimeconfig.cache
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\ref\PrintNode.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\Consul.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\System.CodeDom.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\System.Management.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\runtimes\win\lib\net7.0\System.Management.dll

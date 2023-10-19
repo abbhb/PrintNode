@@ -27,6 +27,8 @@ if (File.Exists(configFilePath))
             Config.name = configs.Name;
             Config.Accesskey = configs.Accesskey;
             Config.Secretkey = configs.Secretkey;
+            Config.myport = configs.Myport;
+            Config.myip = configs.Myip;
         }
     }
     catch (Exception ex)
@@ -42,6 +44,11 @@ else
 TempFileUtil.isHavePath();
 
 
+// 修改 IP 和端口
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Listen(System.Net.IPAddress.Parse(Config.myip), Config.myport);
+});
 
 // Add services to the container.
 
@@ -70,4 +77,5 @@ rocketMQConsumer.start();
 //生产者
 RocketMQSendCenter.toPDFRespSend.Start();
 
+ConsulServer.start();
 app.Run();

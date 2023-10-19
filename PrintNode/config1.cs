@@ -16,6 +16,10 @@
         public string Accesskey { get; set; }
 
         public string Secretkey { get; set; }
+        public string Myip { get; set; }
+        public int Myport { get; set; }
+
+
 
     }
 }

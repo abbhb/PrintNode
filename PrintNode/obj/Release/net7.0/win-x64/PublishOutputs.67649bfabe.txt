@@ -325,6 +325,7 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\mscorrc.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\msquic.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\aspnetcorev2_inprocess.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\BouncyCastle.Crypto.dll
+D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Consul.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.barcodes.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.bouncy-castle-connector.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.forms.dll
@@ -351,7 +352,9 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\PdfiumViewer.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\System.CodeDom.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\System.Drawing.Common.dll
+D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\System.Management.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\System.Runtime.InteropServices.WindowsRuntime.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\YamlDotNet.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\nl\PdfiumViewer.resources.dll

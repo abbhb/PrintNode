@@ -1,0 +1,150 @@
+﻿#Software: PrintNode
+#ProcessID: 5608 x64
+#AppDomain: PrintNode
+#FileName: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 3.09:56:27.1710000
+#Date: 2023-10-18
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+21:52:56.344  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+21:52:56.347  1 N - NewLife组件核心库 ©2002-2023 NewLife
+21:52:56.347  1 N - PrintNode v1.0.0 Build 2000-01-01 .NET 7.0
+21:52:56.347  1 N - PrintNode 
+21:52:56.347  1 N - 保存配置 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Config\Core.config
+21:52:56.352  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+21:52:56.352  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+21:52:56.472  1 N - [_group]正在准备消费 print_send_msg
+21:52:56.479  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+21:52:56.483  1 N - [print_send_msg]集群地址：tcp://192.168.12.12:9876
+21:52:56.484  1 N - [print_send_msg]正在连接[tcp://192.168.12.12:9876]
+21:52:56.486  1 N - 保存配置 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Config\Socket.config
+21:52:56.506  1 N - Tcp.Open tcp://0.0.0.0:2020=>192.168.12.12:9876
+21:52:56.575  1 N - NewLife.RocketMQ.Protocol.ResponseException: TOPIC_NOT_EXIST: No topic route info in name server for the topic: print_send_msg
+See https://rocketmq.apache.org/docs/bestPractice/06FAQ for further details.
+   at NewLife.RocketMQ.ClusterClient.Invoke(RequestCode request, Object body, Object extFields, Boolean ignoreError)
+   at NewLife.RocketMQ.NameClient.GetRouteInfo(String topic)
+   at NewLife.RocketMQ.Client.MqBase.Start()
+   at NewLife.RocketMQ.Consumer.Start()
+   at PrintNode.RocketMQConsumer.start() in D:\C#\PrintNode\PrintNode\RocketMQConsumer.cs:line 69
+   at Program.<Main>$(String[] args) in D:\C#\PrintNode\PrintNode\Program.cs:line 68
+21:52:56.606  1 N - 异常退出！
+
+#Software: PrintNode
+#ProcessID: 29340 x64
+#AppDomain: PrintNode
+#FileName: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 3.09:57:17.7960000
+#Date: 2023-10-18
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+21:53:46.981  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+21:53:46.984  1 N - NewLife组件核心库 ©2002-2023 NewLife
+21:53:46.984  1 N - PrintNode v1.0.0 Build 2000-01-01 .NET 7.0
+21:53:46.984  1 N - PrintNode 
+21:53:46.984  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+21:53:46.984  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+21:53:47.132  1 N - [_group]正在准备消费 print_send_msg
+21:53:47.140  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+21:53:47.145  1 N - [print_send_msg]集群地址：tcp://192.168.12.12:9876
+21:53:47.146  1 N - [print_send_msg]正在连接[tcp://192.168.12.12:9876]
+21:53:47.165  1 N - Tcp.Open tcp://0.0.0.0:2071=>192.168.12.12:9876
+21:53:47.212  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:53:47.216  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:53:47.322  8 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:53:47.339  8 Y T [_group]SYSTEM_ERROR: no consumer for this group
+21:53:47.444 16 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:53:47.450 16 Y T [_group]消费者列表[1]：192.168.12.36@29340
+21:53:47.452 16 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+21:53:47.482 19 Y P [_group]初始化offset[broker-a@0] Offset=0
+21:53:47.484 19 Y P [_group]初始化offset[broker-a@1] Offset=0
+21:53:47.486 17 Y P [_group]初始化offset[broker-a@2] Offset=0
+21:53:47.488  9 Y P [_group]初始化offset[broker-a@3] Offset=0
+21:53:47.489  4 Y P [_group]初始化offset[broker-a@4] Offset=0
+21:53:47.491  4 Y P [_group]初始化offset[broker-a@5] Offset=0
+21:53:47.492  4 Y P [_group]初始化offset[broker-a@6] Offset=0
+21:53:47.494  4 Y P [_group]初始化offset[broker-a@7] Offset=0
+21:53:47.495  4 Y P [_group]初始化offset[broker-a@8] Offset=0
+21:53:47.496  4 Y P [_group]初始化offset[broker-a@9] Offset=0
+21:53:47.497  4 Y P [_group]初始化offset[broker-a@10] Offset=0
+21:53:47.499  4 Y P [_group]初始化offset[broker-a@11] Offset=0
+21:53:47.500  4 Y P [_group]初始化offset[broker-a@12] Offset=0
+21:53:47.502  6 Y P [_group]初始化offset[broker-a@13] Offset=0
+21:53:47.503  4 Y P [_group]初始化offset[broker-a@14] Offset=0
+21:53:47.505  4 Y P [_group]初始化offset[broker-a@15] Offset=0
+21:54:17.180  6 Y T [print_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintNode
+#ProcessID: 32024 x64
+#AppDomain: PrintNode
+#FileName: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 3.10:10:37.0310000
+#Date: 2023-10-18
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+22:07:06.216  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+22:07:06.219  1 N - NewLife组件核心库 ©2002-2023 NewLife
+22:07:06.219  1 N - PrintNode v1.0.0 Build 2000-01-01 .NET 7.0
+22:07:06.219  1 N - PrintNode 
+22:07:06.219  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+22:07:06.219  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+22:07:06.349  1 N - [_group]正在准备消费 print_send_msg
+22:07:06.355  1 N - [_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+22:07:06.359  1 N - [print_send_msg]集群地址：tcp://192.168.12.12:9876
+22:07:06.360  1 N - [print_send_msg]正在连接[tcp://192.168.12.12:9876]
+22:07:06.377  1 N - Tcp.Open tcp://0.0.0.0:2281=>192.168.12.12:9876
+22:07:06.417  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+22:07:06.422  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+22:07:06.542  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+22:07:06.567  9 Y T [_group]SYSTEM_ERROR: no consumer for this group
+22:07:06.657  9 Y T [_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+22:07:06.658  9 Y T [_group]消费者列表[1]：192.168.12.36@32024
+22:07:06.660  9 Y T [_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+22:07:06.673  8 Y P [_group]初始化offset[broker-a@0] Offset=0
+22:07:06.674  4 Y P [_group]初始化offset[broker-a@1] Offset=0
+22:07:06.675  4 Y P [_group]初始化offset[broker-a@2] Offset=0
+22:07:06.676  6 Y P [_group]初始化offset[broker-a@3] Offset=0
+22:07:06.677  6 Y P [_group]初始化offset[broker-a@4] Offset=0
+22:07:06.678  6 Y P [_group]初始化offset[broker-a@5] Offset=0
+22:07:06.679  8 Y P [_group]初始化offset[broker-a@6] Offset=0
+22:07:06.680  8 Y P [_group]初始化offset[broker-a@7] Offset=0
+22:07:06.681  6 Y P [_group]初始化offset[broker-a@8] Offset=0
+22:07:06.682  6 Y P [_group]初始化offset[broker-a@9] Offset=0
+22:07:06.683  6 Y P [_group]初始化offset[broker-a@10] Offset=0
+22:07:06.684  6 Y P [_group]初始化offset[broker-a@11] Offset=0
+22:07:06.686  6 Y P [_group]初始化offset[broker-a@12] Offset=0
+22:07:06.687  6 Y P [_group]初始化offset[broker-a@13] Offset=0
+22:07:06.688  4 Y P [_group]初始化offset[broker-a@14] Offset=0
+22:07:06.689  8 Y P [_group]初始化offset[broker-a@15] Offset=0

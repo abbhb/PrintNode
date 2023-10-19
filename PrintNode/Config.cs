@@ -29,6 +29,8 @@
 
 
         public static string name { get; set; }
+        public static string myip { get; set; }
+        public static int myport { get; set; }
 
     }
 }
