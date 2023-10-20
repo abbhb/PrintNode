@@ -17,15 +17,17 @@ namespace PrintNode
                 HTTP = $"http://{Config.myip}:{Config.myport}/api/Health",//健康检查地址 44308是visualstudio启动的端口
                 Timeout = TimeSpan.FromSeconds(5)
             };
-
+            IDictionary<string, string> meta = new Dictionary<string, string>();
+            meta.Add("ZName", Config.name);
             var registration = new AgentServiceRegistration()
             {
                 Checks = new[] { httpCheck },
                 ID = Config.tag,
-                Name = Config.name,
+                Name = "打印机服务注册",
                 Address = Config.myip,
                 Port = Config.myport,
-                Tags = new[] { "printer" }
+                Tags = new[] { "printer" },
+                Meta =meta
 
             };
 
