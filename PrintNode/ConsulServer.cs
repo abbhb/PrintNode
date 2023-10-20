@@ -7,7 +7,7 @@ namespace PrintNode
         public static void start()
         {
             
-            var consulClient = new ConsulClient(p => { p.Address = new Uri($"http://192.168.12.12:8500"); });//请求注册的 Consul 地址
+            var consulClient = new ConsulClient(p => { p.Address = new Uri($"http://{Config.consulip}:{Config.consulport}"); });//请求注册的 Consul 地址
 
 
             var httpCheck = new AgentServiceCheck()

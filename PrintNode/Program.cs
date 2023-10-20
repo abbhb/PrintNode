@@ -29,6 +29,8 @@ if (File.Exists(configFilePath))
             Config.Secretkey = configs.Secretkey;
             Config.myport = configs.Myport;
             Config.myip = configs.Myip;
+            Config.consulip = configs.Consulip;
+            Config.consulport = configs.Consulport;
         }
     }
     catch (Exception ex)

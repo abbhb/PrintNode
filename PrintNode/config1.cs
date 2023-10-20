@@ -18,6 +18,8 @@
         public string Secretkey { get; set; }
         public string Myip { get; set; }
         public int Myport { get; set; }
+        public string Consulip { get; set; }
+        public int Consulport { get; set; }
 
 
 

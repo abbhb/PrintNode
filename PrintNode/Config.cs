@@ -31,6 +31,8 @@
         public static string name { get; set; }
         public static string myip { get; set; }
         public static int myport { get; set; }
+        public static string consulip { get; set; }
+        public static int consulport { get; set; }
 
     }
 }
