@@ -338,6 +338,7 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.styledxmlp
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.svg.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itext.commons.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\itextsharp.dll
+D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\System.Web.Cors.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll

@@ -5,5 +5,7 @@ tag: ai_fuwuqi_1 #tag必须唯一
 name: AI服务器里的
 accesskey: 
 secretkey: 
-myip: 192.168.12.12
+myip: 192.168.12.122
 myport: 23123
+consulip: 192.168.12.12
+consulport: 8500

@@ -1,0 +1,73 @@
+﻿#Software: PrintNode
+#ProcessID: 38472 x64
+#AppDomain: PrintNode
+#FileName: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 4.22:02:25.7810000
+#Date: 2023-10-27
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+13:23:32.095  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+13:23:32.097  1 N - NewLife组件核心库 ©2002-2023 NewLife
+13:23:32.098  1 N - PrintNode v1.0.0 Build 2000-01-01 .NET 7.0
+13:23:32.098  1 N - PrintNode 
+13:23:32.098  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+13:23:32.098  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+13:23:32.337  1 N - [print_send_msg_group]正在准备消费 print_send_msg
+13:23:32.343  1 N - [print_send_msg_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+13:23:32.347  1 N - [print_send_msg]集群地址：tcp://192.168.12.12:9876
+13:23:32.347  1 N - [print_send_msg]正在连接[tcp://192.168.12.12:9876]
+13:23:32.365  1 N - Tcp.Open tcp://0.0.0.0:10131=>192.168.12.12:9876
+13:23:32.417  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+13:23:32.422  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+13:23:32.525  6 Y T [print_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+13:23:32.532  6 Y T [print_send_msg_group]消费者列表[1]：192.168.12.122@8396
+13:23:32.535  6 Y T [print_send_msg_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+13:23:32.550  9 Y P [print_send_msg_group]初始化offset[broker-a@0] Offset=0
+13:23:32.550  9 Y P [print_send_msg_group]初始化offset[broker-a@1] Offset=1
+13:23:32.550  9 Y P [print_send_msg_group]初始化offset[broker-a@2] Offset=1
+13:23:32.550  9 Y P [print_send_msg_group]初始化offset[broker-a@3] Offset=1
+13:23:32.551  8 Y P [print_send_msg_group]初始化offset[broker-a@4] Offset=0
+13:23:32.551  8 Y P [print_send_msg_group]初始化offset[broker-a@5] Offset=1
+13:23:32.552  9 Y P [print_send_msg_group]初始化offset[broker-a@6] Offset=0
+13:23:32.552  9 Y P [print_send_msg_group]初始化offset[broker-a@7] Offset=1
+13:23:32.552  9 Y P [print_send_msg_group]初始化offset[broker-a@8] Offset=2
+13:23:32.552  9 Y P [print_send_msg_group]初始化offset[broker-a@9] Offset=2
+13:23:32.553  4 Y P [print_send_msg_group]初始化offset[broker-a@10] Offset=0
+13:23:32.553  4 Y P [print_send_msg_group]初始化offset[broker-a@11] Offset=1
+13:23:32.554 14 Y P [print_send_msg_group]初始化offset[broker-a@12] Offset=0
+13:23:32.556 14 Y P [print_send_msg_group]初始化offset[broker-a@13] Offset=0
+13:23:32.558 14 Y P [print_send_msg_group]初始化offset[broker-a@14] Offset=0
+13:23:32.559  4 Y P [print_send_msg_group]初始化offset[broker-a@15] Offset=0
+13:23:40.365  1 N - System.Net.Sockets.SocketException (10049): 在其上下文中，该请求的地址无效。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass30_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\C#\PrintNode\PrintNode\Program.cs:line 94
+13:23:40.390  1 N - 异常退出！

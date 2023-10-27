@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ffUCKhjUpbBDwTnLN/0t5kb5nX1eVvrknGtRaakd5j91WsO+mw7oy0V9aBdZmTBK6YqzYz5qxvIX9Zc9iwpurQ==",
+  "dgSpecHash": "SI+RCFvuqhjhEO9kPSefqsYIqaFDQ0JF4hw70cZzDnn3+3UPAiKny7fl8BhmhseofxVtfTV7Id42j2V5AxscPQ==",
   "success": true,
   "projectFilePath": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\qc200\\.nuget\\packages\\itext.commons\\8.0.1\\itext.commons.8.0.1.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\itext7\\8.0.1\\itext7.8.0.1.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
+    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.aspnet.cors\\5.3.0-preview1\\microsoft.aspnet.cors.5.3.0-preview1.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\1.1.0\\microsoft.dotnet.platformabstractions.1.1.0.nupkg.sha512",
@@ -131,6 +132,16 @@
       "warningLevel": 1,
       "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net7.0”还原包“iTextSharp 5.5.13.3”。此包可能与项目不完全兼容。",
       "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net7.0”还原包“Microsoft.AspNet.Cors 5.3.0-preview1”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.AspNet.Cors",
       "targetGraphs": [
         "net7.0"
       ]

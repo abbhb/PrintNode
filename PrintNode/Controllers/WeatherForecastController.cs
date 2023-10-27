@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PrintNode.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

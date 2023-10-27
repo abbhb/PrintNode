@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using System.Management;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -7,6 +8,7 @@ namespace PrintNode.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class PrintDeviceController : ControllerBase
     {
         // GET: api/<PrintDeviceController>
@@ -25,7 +27,7 @@ namespace PrintNode.Controllers
         // 获取该打印机状态
         // GET api/<PrintDeviceController>/status
         [HttpGet("status")]
-        public PrintStatus GetStatus()
+        public R<PrintStatus>  GetStatus()
         {
             // 使用 WMI 查询来获取打印队列信息
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PrintJob");
@@ -93,7 +95,7 @@ namespace PrintNode.Controllers
             PrintStatus printStatusa = new PrintStatus { printName = Config.tag, printDescription = Config.name, listNums = listNums, statusType = statusType, statusTypeMessage = statusMessage, printJobs = printJobsas };
             Console.WriteLine($"printStatusa = {printStatusa}");
 
-            return printStatusa;
+            return R<PrintStatus>.success(printStatusa);
         }
 
         // POST api/<PrintDeviceController>

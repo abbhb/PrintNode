@@ -32,8 +32,8 @@ namespace PrintNode
                 AcroApp app = new AcroApp();
                 AcroAVDoc avDoc = new AcroAVDoc();
                 // 打开要转成PDF的文件
-
-                avDoc.Open(filePath, "title");
+                Console.WriteLine($"filePath:{filePath},fileName:{printReq.name}");
+                avDoc.Open(filePath, printReq.name);
                 AcroPDDoc pdDoc = avDoc.GetPDDoc();
                 int startPage = printReq.startNum;
                 int endPage = printReq.endNum;
@@ -77,12 +77,14 @@ namespace PrintNode
                 printerSettings.SetHdevmode(printerSettings.GetHdevmode()); // 保存修改后的设置
 
                 avDoc.PrintPagesSilent(startPage, endPage, 2,1,1);
-
+                //得关闭
 
                 ToPrintResp toPrintResp = new ToPrintResp()
                 {
                     isSuccess = true,
                 };
+                avDoc.Close(0);
+                app.Exit();
                 return toPrintResp;
 
             }catch (Exception e)
@@ -94,7 +96,10 @@ namespace PrintNode
                     message = e.Message
                 };
                 return toPrintResp;
-            }finally { CoUninitialize(); }
+            }finally { 
+
+                CoUninitialize(); 
+            }
 
            
         }

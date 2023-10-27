@@ -55,6 +55,16 @@ builder.WebHost.ConfigureKestrel(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("*") // 允许的跨域来源
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -69,6 +79,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
 
@@ -78,6 +89,5 @@ rocketMQConsumer.start();
 
 //生产者
 RocketMQSendCenter.toPDFRespSend.Start();
-
 ConsulServer.start();
 app.Run();

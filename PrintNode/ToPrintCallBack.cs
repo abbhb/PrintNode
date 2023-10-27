@@ -21,6 +21,7 @@ namespace PrintNode
 
                 if (json != null && !StringHelper.IsNullOrEmpty(json.id))
                 {
+                    Console.WriteLine($"JSON?:{json}");
                     // 保存源文件到本地
                     string filetemppath = TempFileUtil.saveFileByUrl(json.filePDFUrl);
                     ToPrintResp printR;
@@ -33,7 +34,6 @@ namespace PrintNode
                     if (printR == null || (!printR.isSuccess))
                     {
                         //打印不成功
-                        TempFileUtil.removeFile(filetemppath);
                         throw new Exception("服务异常,请重试！");
                     }
                     else
@@ -46,7 +46,6 @@ namespace PrintNode
 
                         //返回的消息
                         RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
-                        TempFileUtil.removeFile(filetemppath);
                         //一旦异常会进外面的异常里，否则消费消息
                     }
                 }

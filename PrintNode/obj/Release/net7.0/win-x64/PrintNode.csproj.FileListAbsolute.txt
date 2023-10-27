@@ -388,3 +388,4 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\ref\PrintNode.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\win-x64\Consul.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\win-x64\System.CodeDom.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\win-x64\System.Management.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\win-x64\System.Web.Cors.dll

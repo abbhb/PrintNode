@@ -1,0 +1,100 @@
+﻿#Software: PrintToPDFNode
+#ProcessID: 39472 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 4.05:01:01.8750000
+#Date: 2023-10-26
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+20:22:08.189  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+20:22:08.192  1 N - NewLife组件核心库 ©2002-2023 NewLife
+20:22:08.192  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+20:22:08.192  1 N - PrintToPDFNode 
+20:22:08.192  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+20:22:08.192  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+20:22:08.403  1 N - [print_filetopdf_send_msg_group]正在准备消费 print_filetopdf_send_msg
+20:22:08.404  1 N - [print_filetopdf_send_msg_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+20:22:08.408  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+20:22:08.409  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+20:22:08.440  1 N - Tcp.Open tcp://0.0.0.0:2277=>192.168.12.12:9876
+20:22:08.489  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+20:22:08.494  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+20:22:08.627  4 Y T [print_filetopdf_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+20:22:08.648  4 Y T [print_filetopdf_send_msg_group]SYSTEM_ERROR: no consumer for this group
+20:22:08.748  4 Y T [print_filetopdf_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+20:22:08.750  4 Y T [print_filetopdf_send_msg_group]消费者列表[1]：192.168.12.36@39472
+20:22:08.754  4 Y T [print_filetopdf_send_msg_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+20:22:08.769  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@0] Offset=0
+20:22:08.772  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@1] Offset=0
+20:22:08.773 13 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@2] Offset=0
+20:22:08.775  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@3] Offset=0
+20:22:08.777  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@4] Offset=0
+20:22:08.779  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@5] Offset=0
+20:22:08.780  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@6] Offset=0
+20:22:08.782  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@7] Offset=0
+20:22:08.784  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@8] Offset=0
+20:22:08.786  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@9] Offset=0
+20:22:08.787 13 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@10] Offset=0
+20:22:08.789 13 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@11] Offset=0
+20:22:08.791 13 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@12] Offset=0
+20:22:08.792  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@13] Offset=0
+20:22:08.793  6 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@14] Offset=0
+20:22:08.795  9 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@15] Offset=0
+20:22:38.475 21 Y T [print_filetopdf_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintToPDFNode
+#ProcessID: 38924 x64
+#AppDomain: PrintToPDFNode
+#FileName: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintToPDFNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintToPDFNode\bin\Debug\net7.0\PrintToPDFNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 4.05:54:27.0460000
+#Date: 2023-10-26
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+21:15:33.362  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+21:15:33.364  1 N - NewLife组件核心库 ©2002-2023 NewLife
+21:15:33.365  1 N - PrintToPDFNode v1.0.0 Build 2000-01-01 .NET 7.0
+21:15:33.365  1 N - PrintToPDFNode 
+21:15:33.365  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+21:15:33.365  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+21:15:33.594  1 N - [print_filetopdf_send_msg_group]正在准备消费 print_filetopdf_send_msg
+21:15:33.595  1 N - [print_filetopdf_send_msg_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+21:15:33.599  1 N - [print_filetopdf_send_msg]集群地址：tcp://192.168.12.12:9876
+21:15:33.600  1 N - [print_filetopdf_send_msg]正在连接[tcp://192.168.12.12:9876]
+21:15:33.617  1 N - Tcp.Open tcp://0.0.0.0:8656=>192.168.12.12:9876
+21:15:33.659  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:15:33.664  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:15:33.788  9 Y T [print_filetopdf_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:15:33.799  9 Y T [print_filetopdf_send_msg_group]消费者列表[1]：192.168.12.122@8956
+21:15:33.895  6 Y T [print_filetopdf_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:15:33.896  6 Y T [print_filetopdf_send_msg_group]消费者列表[2]：192.168.12.122@8956,192.168.12.36@38924
+21:15:33.900  6 Y T [print_filetopdf_send_msg_group]消费重新平衡，当前消费者负责queue分片：broker-a[8,9,10,11,12,13,14,15]
+21:15:33.907  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@8] Offset=1
+21:15:33.907  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@9] Offset=1
+21:15:33.907  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@10] Offset=1
+21:15:33.907  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@11] Offset=2
+21:15:33.907  8 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@12] Offset=1
+21:15:33.916 15 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@13] Offset=0
+21:15:33.918  9 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@14] Offset=0
+21:15:33.918  9 Y P [print_filetopdf_send_msg_group]初始化offset[broker-a@15] Offset=1

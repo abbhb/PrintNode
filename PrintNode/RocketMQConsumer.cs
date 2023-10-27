@@ -44,8 +44,8 @@ namespace PrintNode
             _consumer.Subscription = tags;
             _consumer.OnConsume = (q, ms) =>
             {
-                //string mInfo = $"BrokerName={q.BrokerName},QueueId={q.QueueId},Length={ms.Length}";
-                //Log.Info(mInfo);
+                string mInfo = $"BrokerName={q.BrokerName},QueueId={q.QueueId},Length={ms.Length}";
+                Console.WriteLine($"mInfo:{mInfo}");
                 try
                 {
                     callback(ms.ToList());
@@ -66,6 +66,8 @@ namespace PrintNode
         }
         public void start()
         {
+            Console.WriteLine($"tag:{Config.tag}");
+
             _consumer.Start();
         }
         public void stop()

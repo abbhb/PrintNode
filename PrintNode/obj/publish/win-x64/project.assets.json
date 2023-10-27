@@ -143,6 +143,15 @@
           "lib/itextsharp.dll": {}
         }
       },
+      "Microsoft.AspNet.Cors/5.3.0-preview1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Cors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Cors.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/7.0.11": {
         "type": "package",
         "dependencies": {
@@ -1987,6 +1996,15 @@
         },
         "runtime": {
           "lib/itextsharp.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Cors/5.3.0-preview1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Cors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Cors.dll": {}
         }
       },
       "Microsoft.AspNetCore.OpenApi/7.0.11": {
@@ -3930,6 +3948,20 @@
         "lib/iTextSharp.xml",
         "lib/itextsharp.dll",
         "notice.txt"
+      ]
+    },
+    "Microsoft.AspNet.Cors/5.3.0-preview1": {
+      "sha512": "dGR+FTG0Sfrqyg5dFybtYr17ZX5H3Xb17D5PeNz5/87Ble6hr3OzY01Ez6ZnZboTvSk7FJl2GjWhmAITZi7UFQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.cors/5.3.0-preview1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Cors.dll",
+        "microsoft.aspnet.cors.5.3.0-preview1.nupkg.sha512",
+        "microsoft.aspnet.cors.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/7.0.11": {
@@ -8579,6 +8611,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Consul >= 1.6.10.9",
+      "Microsoft.AspNet.Cors >= 5.3.0-preview1",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
       "Microsoft.Extensions.Logging.Console >= 3.1.32",
       "NLog.Extensions.Logging >= 5.3.4",
@@ -8642,6 +8675,10 @@
           "Consul": {
             "target": "Package",
             "version": "[1.6.10.9, )"
+          },
+          "Microsoft.AspNet.Cors": {
+            "target": "Package",
+            "version": "[5.3.0-preview1, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -8759,6 +8796,16 @@
       "warningLevel": 1,
       "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net7.0”还原包“iTextSharp 5.5.13.3”。此包可能与项目不完全兼容。",
       "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net7.0”还原包“Microsoft.AspNet.Cors 5.3.0-preview1”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.AspNet.Cors",
       "targetGraphs": [
         "net7.0"
       ]
