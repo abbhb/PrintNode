@@ -8,7 +8,7 @@ namespace PrintNode
         // 创建哈希映射 id,次数，要求超过3次就直接消费消息
         private static Dictionary<string, int> hashMap = new Dictionary<string, int>();
         // 定义回调函数和异常处理回调
-        public static Action<List<NewLife.RocketMQ.Protocol.MessageExt>> successCallback = async result =>
+        public static Action<List<NewLife.RocketMQ.Protocol.MessageExt>> successCallback = result =>
         {
             //Console.WriteLine("Operation succeeded. Result: " + result);
             //实际一次就一条消息
@@ -23,13 +23,14 @@ namespace PrintNode
                 {
                     Console.WriteLine($"JSON?:{json}");
                     // 保存源文件到本地
-                    string filetemppath = TempFileUtil.saveFileByUrl(json.filePDFUrl);
-                    ToPrintResp printR;
+                    string fileNames = TempFileUtil.saveFileByUrl(json.filePDFUrl);
+                    string filetemppath = TempFileUtil.tempPath + fileNames;
+                    ToPrintResp printR = null;
+                    ToPrint toPrintResp = new ToPrint();
                     for (global::System.Int32 i = 0; i < json.copies; i++)
                     {
-                         printR = ToPrint.print(filetemppath, json);
+                        printR = toPrintResp.printAsync(filetemppath, json, fileNames);
                     }
-                    printR = ToPrint.print(filetemppath, json);
                     //最终结果
                     if (printR == null || (!printR.isSuccess))
                     {

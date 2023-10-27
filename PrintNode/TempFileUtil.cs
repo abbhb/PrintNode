@@ -40,7 +40,7 @@ namespace PrintNode
             WebClient webClient = new WebClient();
             webClient.Encoding = Encoding.UTF8;
             webClient.DownloadFile(url, tempPath+fileName);
-            return tempPath + fileName;
+            return fileName;
         }
 
         public static void removeFile(string filePath)

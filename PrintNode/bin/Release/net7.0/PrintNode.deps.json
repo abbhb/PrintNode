@@ -15,6 +15,7 @@
           "NLog.Extensions.Logging": "5.3.4",
           "NewLife.RocketMQ": "2.5.2023.904",
           "Newtonsoft.Json": "13.0.3",
+          "PInvoke.Windows.Core": "0.7.124",
           "PdfiumViewer": "2.13.0",
           "PdfiumViewer.Native.x86_64.v8-xfa": "2018.4.8.256",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -363,6 +364,17 @@
         }
       },
       "PdfiumViewer.Native.x86_64.v8-xfa/2018.4.8.256": {},
+      "PInvoke.Windows.Core/0.7.124": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Windows.Core.dll": {
+            "assemblyVersion": "0.7.0.0",
+            "fileVersion": "0.7.124.52293"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -647,6 +659,7 @@
           }
         }
       },
+      "System.Memory/4.5.4": {},
       "System.ObjectModel/4.0.12": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1239,6 +1252,13 @@
       "path": "pdfiumviewer.native.x86_64.v8-xfa/2018.4.8.256",
       "hashPath": "pdfiumviewer.native.x86_64.v8-xfa.2018.4.8.256.nupkg.sha512"
     },
+    "PInvoke.Windows.Core/0.7.124": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-er/PkwUBie3nXlwiKOfOxmdAj6ae8eFCLUgI5g6+9RAbyMoXMQnwAPx1atq0ZxU2LeozBdWtMQjogqcMNJhg1w==",
+      "path": "pinvoke.windows.core/0.7.124",
+      "hashPath": "pinvoke.windows.core.0.7.124.nupkg.sha512"
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1497,6 +1517,13 @@
       "sha512": "sha512-JONr3YTgi9PwZGb7qdJo2tqx0yauj2EJhmc3vCHuhijM9H5DowRlaw7Vuuml0RAgow4BghxcTwjc/wGC8ywIqg==",
       "path": "system.management/8.0.0-rc.2.23479.6",
       "hashPath": "system.management.8.0.0-rc.2.23479.6.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
     "System.ObjectModel/4.0.12": {
       "type": "package",

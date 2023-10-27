@@ -350,6 +350,7 @@ D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Newtonsoft.Json.
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\NLog.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\NLog.Extensions.Logging.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\PdfiumViewer.dll
+D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\PInvoke.Windows.Core.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

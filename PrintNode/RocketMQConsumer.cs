@@ -48,13 +48,13 @@ namespace PrintNode
                 Console.WriteLine($"mInfo:{mInfo}");
                 try
                 {
-                    callback(ms.ToList());
+                    this.callback(ms.ToList());
                     return true;
                 }
                 catch (Exception ex)
                 {
                     
-                    return errorCallback(new MyException<List<NewLife.RocketMQ.Protocol.MessageExt>>(ex,ms.ToList()));
+                    return this.errorCallback(new MyException<List<NewLife.RocketMQ.Protocol.MessageExt>>(ex,ms.ToList()));
                     Console.WriteLine($"消费失败L:{ex}");
                     //消费失败就推送一条回执,消费不了就不能占用资源
                 }

@@ -14,7 +14,7 @@ namespace PrintNode
             json.startNum = 1;
             json.endNum = 2;
 
-            ToPrint.print(mufile, json);
+            //ToPrint.printAsync(mufile, json, "UI学习方向-副本.pdf");
 
         }
     }

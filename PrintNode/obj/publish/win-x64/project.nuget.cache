@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dfUqNQ47sZ3n4u5q0Iu2c0PX7dz6gzdFsPqxn9D7RINiJZFNdAWNRPtd6KRhecjCgqTIM0mcAwwcgVKHrC650g==",
+  "dgSpecHash": "x3yYvTQgp3yZ4O6C/l2KWhkLwd8Etl3TmA/uh8rTe17Ge1K2kEKvoV94BnCeiLp7VPPCRUVsj0oTc10ZswsMjg==",
   "success": true,
   "projectFilePath": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\qc200\\.nuget\\packages\\nlog.extensions.logging\\5.3.4\\nlog.extensions.logging.5.3.4.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\pdfiumviewer\\2.13.0\\pdfiumviewer.2.13.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\pdfiumviewer.native.x86_64.v8-xfa\\2018.4.8.256\\pdfiumviewer.native.x86_64.v8-xfa.2018.4.8.256.nupkg.sha512",
+    "C:\\Users\\qc200\\.nuget\\packages\\pinvoke.windows.core\\0.7.124\\pinvoke.windows.core.0.7.124.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\runtime.any.system.diagnostics.tracing\\4.3.0\\runtime.any.system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\runtime.any.system.globalization\\4.3.0\\runtime.any.system.globalization.4.3.0.nupkg.sha512",
@@ -97,6 +98,7 @@
     "C:\\Users\\qc200\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.management\\8.0.0-rc.2.23479.6\\system.management.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\qc200\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.private.uri\\4.3.0\\system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",

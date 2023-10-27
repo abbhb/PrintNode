@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "PInvoke.Windows.Core": {
+              "target": "Package",
+              "version": "[0.7.124, )"
+            },
             "PdfiumViewer": {
               "target": "Package",
               "version": "[2.13.0, )"

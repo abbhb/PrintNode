@@ -73,3 +73,4 @@ D:\C#\PrintNode\PrintNode\bin\Release\net7.0\System.CodeDom.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\System.Management.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\runtimes\win\lib\net7.0\System.Management.dll
 D:\C#\PrintNode\PrintNode\bin\Release\net7.0\System.Web.Cors.dll
+D:\C#\PrintNode\PrintNode\bin\Release\net7.0\PInvoke.Windows.Core.dll

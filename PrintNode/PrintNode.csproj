@@ -102,6 +102,7 @@
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	  <PackageReference Include="PdfiumViewer" Version="2.13.0" />
 	  <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
+	  <PackageReference Include="PInvoke.Windows.Core" Version="0.7.124" />
 	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 	  <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.32" />
 	  <PackageReference Include="NLog.Extensions.Logging" Version="5.3.4" />

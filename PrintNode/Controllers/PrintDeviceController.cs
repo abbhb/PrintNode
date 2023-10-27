@@ -98,6 +98,9 @@ namespace PrintNode.Controllers
             return R<PrintStatus>.success(printStatusa);
         }
 
+
+
+
         // POST api/<PrintDeviceController>
         [HttpPost]
         public void Post([FromBody] string value)
