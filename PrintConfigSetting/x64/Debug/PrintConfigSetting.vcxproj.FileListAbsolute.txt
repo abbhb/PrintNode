@@ -1,0 +1,1 @@
+D:\C#\PrintNode\PrintConfigSetting\x64\Debug\PrintConfigSetting.vcxproj.AssemblyReference.cache

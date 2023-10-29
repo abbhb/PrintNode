@@ -346,3 +346,58 @@
 15:52:13.972  4 Y P [print_send_msg_group]初始化offset[broker-a@14] Offset=0
 15:52:13.976  6 Y P [print_send_msg_group]初始化offset[broker-a@15] Offset=0
 15:52:43.687 27 Y T [print_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+
+#Software: PrintNode
+#ProcessID: 48280 x64
+#AppDomain: PrintNode
+#FileName: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.exe
+#BaseDirectory: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\
+#CurrentDirectory: D:\C#\PrintNode\PrintNode
+#TempPath: C:\Users\qc200\AppData\Local\Temp\
+#CommandLine: D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PrintNode.dll
+#ApplicationType: Web
+#CLR: 7.0.11, .NET 7.0.11
+#OS: Microsoft Windows NT 10.0.19045.0, DESKTOP-UBP9SLV/qc200
+#CPU: 8
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32765/1000
+#SystemStarted: 5.06:12:39.4370000
+#Date: 2023-10-27
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+21:33:45.753  1 N - NewLife.Core v10.5.2023.0903 Build 2023-09-03 .NET 7.0
+21:33:45.755  1 N - NewLife组件核心库 ©2002-2023 NewLife
+21:33:45.755  1 N - PrintNode v1.0.0 Build 2000-01-01 .NET 7.0
+21:33:45.755  1 N - PrintNode 
+21:33:45.756  1 N - NewLife.RocketMQ v2.5.2023.0904 Build 2023-09-04 12:37:18 .NET Standard 2.1
+21:33:45.756  1 N - RocketMQ客户端 ©2002-2023 新生命开发团队
+21:33:46.005  1 N - [print_send_msg_group]正在准备消费 print_send_msg
+21:33:46.016  1 N - [print_send_msg_group]正在从名称服务器[192.168.12.12:9876]查找该Topic所在Broker服务器地址列表
+21:33:46.021  1 N - [print_send_msg]集群地址：tcp://192.168.12.12:9876
+21:33:46.023  1 N - [print_send_msg]正在连接[tcp://192.168.12.12:9876]
+21:33:46.065  1 N - Tcp.Open tcp://0.0.0.0:13131=>192.168.12.12:9876
+21:33:46.133  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:33:46.139  1 N - 发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16
+21:33:46.251  8 Y T [print_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:33:46.272  8 Y T [print_send_msg_group]SYSTEM_ERROR: no consumer for this group
+21:33:46.379 16 Y T [print_send_msg_group]准备从所有Broker服务器上获取消费者列表，以确定当前消费者应该负责消费的queue分片
+21:33:46.386 16 Y T [print_send_msg_group]消费者列表[1]：192.168.12.36@48280
+21:33:46.387 16 Y T [print_send_msg_group]消费重新平衡，当前消费者负责queue分片：broker-a[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@0] Offset=0
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@1] Offset=1
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@2] Offset=1
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@3] Offset=3
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@4] Offset=3
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@5] Offset=4
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@6] Offset=4
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@7] Offset=5
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@8] Offset=5
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@9] Offset=7
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@10] Offset=3
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@11] Offset=4
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@12] Offset=3
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@13] Offset=2
+21:33:46.408  6 Y P [print_send_msg_group]初始化offset[broker-a@14] Offset=1
+21:33:46.410  9 Y P [print_send_msg_group]初始化offset[broker-a@15] Offset=0
+21:34:16.084 29 Y T [print_send_msg]发现Broker[broker-a]: 192.168.12.12:10911, reads=16, writes=16

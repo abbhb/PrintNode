@@ -19,3 +19,8 @@ http://192.168.12.122:23123/api/printDevice
 http://192.168.12.122:23123/api/printDevice/status
 Delete http://192.168.12.122:23123/api/printDevice/cancel/{id} 
 ```
+
+
+# ÒÀÀµ
+- adobe dcÈí¼þ
+- PrintConfigSettingµÄdll

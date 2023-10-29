@@ -1,8 +1,8 @@
 ﻿ip: 192.168.12.12:9876
 topic: print_send_msg
 rtopic: print_send_msg_r
-tag: ai_fuwuqi_1 #tag必须唯一
-name: AI服务器里的
+tag: ceshi_1 #tag必须唯一
+name: 测试电脑
 accesskey: 
 secretkey: 
 myip: 192.168.12.36

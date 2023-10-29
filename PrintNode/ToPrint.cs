@@ -1,10 +1,12 @@
 ﻿using Acrobat;
+using NLog.Fluent;
 using Org.BouncyCastle.Asn1.Utilities;
 using PdfiumViewer;
 using PInvoke;
 using System.ComponentModel;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
+using static PInvoke.DEVMODE;
 
 namespace PrintNode
 {
@@ -29,6 +31,12 @@ namespace PrintNode
         [DllImport("kernel32.dll")]
         public static extern bool GlobalUnlock(IntPtr hMem);
 
+        [DllImport("PrintConfigSetting.dll", EntryPoint = "PrintSet", CharSet = CharSet.Ansi)]
+        extern static int PrintSet(string deviceaName, int duplex, int printingDirection, int color);
+
+        [DllImport("PrintConfigSetting.dll", EntryPoint = "Testasdd", CharSet = CharSet.Ansi)]
+        extern static int Testasdd(int a, int b);
+
 
         public ToPrintResp printAsync(string filePath, PrintDataPDFToPrintReq printReq,string filename)
         {
@@ -41,7 +49,7 @@ namespace PrintNode
                 AcroAVDoc avDoc = new AcroAVDoc();
                 CAcroPDDoc _pdDoc = null;
                 // 打开要转成PDF的文件
-                Console.WriteLine($"filePath:{filePath},fileName:{printReq.name}");
+                Console.WriteLine($"filePath:{filePath},fileName:{filename}");
                 avDoc.Open(filePath, filename);
                 _pdDoc = avDoc.GetPDDoc();
                 int startPage = printReq.startNum;
@@ -57,52 +65,39 @@ namespace PrintNode
                 {
                     return new ToPrintResp { isSuccess = false, message = "起始页越界" };
                 }
-
-                PrinterSettings settings = new PrinterSettings();
-
-                // 打开打印机
-                // 获取默认打印机的 DEVMODE
-                IntPtr hDevMode = settings.GetHdevmode();
-                if (hDevMode != IntPtr.Zero)
+                int fangxiang = 0;//默认竖着
+                if (!printReq.landscape.Equals(0))
                 {
-                    // 锁定 DEVMODE 内存
-                    IntPtr pDevMode = GlobalLock(hDevMode);
-
-                    if (pDevMode != IntPtr.Zero)
-                    {
-                        // 修改 DEVMODE 的属性
-                        DEVMODE devMode = (DEVMODE)Marshal.PtrToStructure(pDevMode, typeof(DEVMODE));
-                        if (settings.CanDuplex)
-                        {
-                            if (printReq.isDuplex.Equals(1))
-                            {
-                                devMode.dmDuplex = DEVMODE.PrintDuplexOptions.DMDUP_SIMPLEX; // 设置双面打印
-
-                            }
-                            if (printReq.isDuplex.Equals(2))
-                            {
-                                devMode.dmDuplex = DEVMODE.PrintDuplexOptions.DMDUP_VERTICAL; // 设置双面打印
-
-                            }
-                            if (printReq.isDuplex.Equals(3))
-                            {
-                                devMode.dmDuplex = DEVMODE.PrintDuplexOptions.DMDUP_HORIZONTAL; // 设置双面打印
-                            }
-                        }
-                        else
-                        {
-                            devMode.dmDuplex = DEVMODE.PrintDuplexOptions.DMDUP_SIMPLEX; // 设置双面打印
-
-                        }
-                        devMode.dmCopies = 1;
-                        devMode.dmOrientation = printReq.landscape.Equals(0) ? DEVMODE.PrinterOrientationOptions.DMORIENT_LANDSCAPE: DEVMODE.PrinterOrientationOptions.DMORIENT_PORTRAIT;
-                        // 解锁 DEVMODE 内存
-                        GlobalUnlock(hDevMode);
-                    }
-                    // 应用 DEVMODE 设置
-                    settings.SetHdevmode(hDevMode);
-                    settings.DefaultPageSettings.SetHdevmode(hDevMode);
+                    fangxiang = 1;
                 }
+                int afdas = Testasdd(1, 2);
+                Console.WriteLine($"输出：{afdas}");
+
+                 PrinterSettings settings = new PrinterSettings();
+                if (settings.CanDuplex)
+                {
+                    if (printReq.isDuplex.Equals(1))
+                    {
+                        PrintSet(settings.PrinterName, 1, fangxiang, 0);
+
+                    }
+                    if (printReq.isDuplex.Equals(2))
+                    {
+                        PrintSet(settings.PrinterName, 2, fangxiang, 0);
+
+                    }
+                    if (printReq.isDuplex.Equals(3))
+                    {
+                        PrintSet(settings.PrinterName, 3, fangxiang, 0);
+                    }
+                }
+                else
+                {
+                    PrintSet(settings.PrinterName, 1, fangxiang, 0);
+
+                }
+
+                Console.WriteLine($"当前的配置：duplex:{settings.Duplex},ori:{settings.DefaultPageSettings.Landscape}");
                 avDoc.PrintPagesSilent(startPage-1, endPage-1, 2,1,1);
                 //得关闭
                 avDoc.Close(0);
@@ -116,6 +111,8 @@ namespace PrintNode
 
             }catch (Exception e)
             {
+                Log.Error();
+                Console.WriteLine(e.ToString());
                 //异常就是打印失败
                 ToPrintResp toPrintResp = new ToPrintResp()
                 {
