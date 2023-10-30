@@ -31,6 +31,8 @@ if (File.Exists(configFilePath))
             Config.myip = configs.Myip;
             Config.consulip = configs.Consulip;
             Config.consulport = configs.Consulport;
+            Config.printDeviceSettingExeName = configs.ExeName;
+            Config.driveName = configs.DriveName;
         }
     }
     catch (Exception ex)

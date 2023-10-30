@@ -1,6 +1,0 @@
-﻿  PrintConfigSetting.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  正在生成代码...
-  PrintConfigSetting.obj : 遇到了 MSIL 模块；对 MSIL 禁用了增量链接；正在执行完全链接
-    正在创建库 D:\C#\PrintNode\x64\Debug\PrintConfigSetting.lib 和对象 D:\C#\PrintNode\x64\Debug\PrintConfigSetting.exp
-  PrintConfigSetting.vcxproj -> D:\C#\PrintNode\x64\Debug\PrintConfigSetting.dll

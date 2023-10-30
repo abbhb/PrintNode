@@ -32,6 +32,7 @@ D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Newtonsoft.Json.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\NLog.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\NLog.Extensions.Logging.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PdfiumViewer.dll
+D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PInvoke.Windows.Core.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -73,4 +74,3 @@ D:\C#\PrintNode\PrintNode\obj\Debug\net7.0\refint\PrintNode.dll
 D:\C#\PrintNode\PrintNode\obj\Debug\net7.0\PrintNode.pdb
 D:\C#\PrintNode\PrintNode\obj\Debug\net7.0\PrintNode.genruntimeconfig.cache
 D:\C#\PrintNode\PrintNode\obj\Debug\net7.0\ref\PrintNode.dll
-D:\C#\PrintNode\PrintNode\bin\Debug\net7.0\PInvoke.Windows.Core.dll

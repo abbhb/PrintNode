@@ -4,6 +4,7 @@ using Org.BouncyCastle.Asn1.Utilities;
 using PdfiumViewer;
 using PInvoke;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using static PInvoke.DEVMODE;
@@ -31,11 +32,7 @@ namespace PrintNode
         [DllImport("kernel32.dll")]
         public static extern bool GlobalUnlock(IntPtr hMem);
 
-        [DllImport("PrintConfigSetting.dll", EntryPoint = "PrintSet", CharSet = CharSet.Ansi)]
-        extern static int PrintSet(string deviceaName, int duplex, int printingDirection, int color);
 
-        [DllImport("PrintConfigSetting.dll", EntryPoint = "Testasdd", CharSet = CharSet.Ansi)]
-        extern static int Testasdd(int a, int b);
 
 
         public ToPrintResp printAsync(string filePath, PrintDataPDFToPrintReq printReq,string filename)
@@ -65,39 +62,40 @@ namespace PrintNode
                 {
                     return new ToPrintResp { isSuccess = false, message = "起始页越界" };
                 }
-                int fangxiang = 0;//默认竖着
+                int fangxiang = 2;//默认竖着
                 if (!printReq.landscape.Equals(0))
                 {
                     fangxiang = 1;
                 }
-                int afdas = Testasdd(1, 2);
-                Console.WriteLine($"输出：{afdas}");
-
-                 PrinterSettings settings = new PrinterSettings();
-                if (settings.CanDuplex)
+                //
+                //PrinterSettings settings = new PrinterSettings();
+                //Console.WriteLine($"{settings.PrinterName}");
+                // 创建一个进程启动信息对象
+                ProcessStartInfo psi = new ProcessStartInfo
                 {
-                    if (printReq.isDuplex.Equals(1))
-                    {
-                        PrintSet(settings.PrinterName, 1, fangxiang, 0);
+                    FileName = "cmd.exe",
+                    RedirectStandardInput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
 
-                    }
-                    if (printReq.isDuplex.Equals(2))
-                    {
-                        PrintSet(settings.PrinterName, 2, fangxiang, 0);
+                // 创建一个进程对象
+                Process process = new Process { StartInfo = psi };
 
-                    }
-                    if (printReq.isDuplex.Equals(3))
-                    {
-                        PrintSet(settings.PrinterName, 3, fangxiang, 0);
-                    }
-                }
-                else
-                {
-                    PrintSet(settings.PrinterName, 1, fangxiang, 0);
+                // 启动cmd.exe
+                process.Start();
 
-                }
+                // 向cmd.exe发送命令
+                process.StandardInput.WriteLine(Config.printDeviceSettingExeName + " \""+Config.driveName+"\" "+ printReq.isDuplex+" "+fangxiang);
 
-                Console.WriteLine($"当前的配置：duplex:{settings.Duplex},ori:{settings.DefaultPageSettings.Landscape}");
+                // 关闭标准输入流
+                process.StandardInput.Close();
+
+                // 等待cmd.exe执行完毕
+                process.WaitForExit();
+                process.Close();
+
+                //Console.WriteLine($"当前的配置：duplex:{settings.Duplex},ori:{settings.DefaultPageSettings.Landscape}");
                 avDoc.PrintPagesSilent(startPage-1, endPage-1, 2,1,1);
                 //得关闭
                 avDoc.Close(0);

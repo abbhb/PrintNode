@@ -39,7 +39,9 @@ namespace PrintNode
                 //SkipOverStoredMsgCount = 0,
                 //BatchSize = 20,
                 Log = NewLife.Log.XTrace.Log,
+              
             };
+           
             // 订阅特定的Tag,只消费tag为tags的消息
             _consumer.Subscription = tags;
             _consumer.OnConsume = (q, ms) =>
@@ -67,7 +69,8 @@ namespace PrintNode
         public void start()
         {
             Console.WriteLine($"tag:{Config.tag}");
-
+            //单线程处理设置最大线程，最小线程也要设置，不然启动报错
+            
             _consumer.Start();
         }
         public void stop()

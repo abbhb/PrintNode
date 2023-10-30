@@ -1,4 +1,6 @@
-﻿namespace PrintNode
+﻿using System.Reflection.Metadata;
+
+namespace PrintNode
 {
     [Serializable]
     public class Config
@@ -30,6 +32,10 @@
         public static int myport { get; set; }
         public static string consulip { get; set; }
         public static int consulport { get; set; }
+
+        public static string printDeviceSettingExeName { get; set; }
+
+        public static string driveName { get; set; }
 
     }
 }

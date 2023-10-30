@@ -21,6 +21,10 @@
         public string Consulip { get; set; }
         public int Consulport { get; set; }
 
+        public string DriveName {  get; set; }
+
+        public string ExeName { get; set; }
+
 
 
     }
