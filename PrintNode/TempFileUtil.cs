@@ -43,6 +43,36 @@ namespace PrintNode
             return fileName;
         }
 
+        public static string saveFileByName(string url,string name)
+        {
+            string zhenshiname = "";
+            // var fileName = GetUrlName(url);
+            if (File.Exists(tempPath + name))
+            {
+                // 生成一个新的UUID
+                Guid newGuid = Guid.NewGuid();
+
+                // 获取UUID的字节数组
+                byte[] guidBytes = newGuid.ToByteArray();
+
+                // 取前四位字节（32位）
+                byte[] firstFourBytes = new byte[4];
+                Array.Copy(guidBytes, firstFourBytes, 4);
+
+                // 将前四位字节转换为整数
+                int result = BitConverter.ToInt32(firstFourBytes, 0);
+                zhenshiname = name + result;
+            }
+            else
+            {
+                zhenshiname = name;
+            }
+            WebClient webClient = new WebClient();
+            webClient.Encoding = Encoding.UTF8;
+            webClient.DownloadFile(url, tempPath + zhenshiname);
+            return zhenshiname;
+        }
+
         public static void removeFile(string filePath)
         {
             //这样就不会导致异常抛出

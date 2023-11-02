@@ -21,18 +21,22 @@ namespace PrintNode
         // 0:异常 1:空闲 2:繁忙 3:忙碌 4:爆满
         public int statusType {  get; set; }
 
-        public List<PrintRW> printJobs;
+        public List<PrintRW> printJobs { get; set; }
 
 
     }
     [Serializable]
     public class PrintRW
     {
+        public string id { get; set; }
         //任务名
         public string documentName { get; set; }
 
-        //页数
+        //已经打印页数
         public int pagesPrinted { get; set; }
+
+        //总页数
+        public int pageCount { get; set; }
 
         public string jobStatus { get; set; }
 

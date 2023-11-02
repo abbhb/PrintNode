@@ -94,7 +94,6 @@ namespace PrintNode
                 // 等待cmd.exe执行完毕
                 process.WaitForExit();
                 process.Close();
-
                 //Console.WriteLine($"当前的配置：duplex:{settings.Duplex},ori:{settings.DefaultPageSettings.Landscape}");
                 avDoc.PrintPagesSilent(startPage-1, endPage-1, 2,1,1);
                 //得关闭

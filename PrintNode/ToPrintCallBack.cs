@@ -23,13 +23,13 @@ namespace PrintNode
                 {
                     Console.WriteLine($"JSON?:{json}");
                     // 保存源文件到本地
-                    string fileNames = TempFileUtil.saveFileByUrl(json.filePDFUrl);
+                    string fileNames = TempFileUtil.saveFileByName(json.filePDFUrl,json.name);
                     string filetemppath = TempFileUtil.tempPath + fileNames;
                     ToPrintResp printR = null;
                     ToPrint toPrintResp = new ToPrint();
                     for (global::System.Int32 i = 0; i < json.copies; i++)
                     {
-                        printR = toPrintResp.printAsync(filetemppath, json, fileNames);
+                        printR = toPrintResp.printAsync(filetemppath, json, json.name);
                     }
                     //最终结果
                     if (printR == null || (!printR.isSuccess))

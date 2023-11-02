@@ -43,7 +43,7 @@ tag: ceshi_1 #tag必须唯一
 name: 测试电脑
 accesskey: 
 secretkey: 
-myip: 192.168.12.36 #插上打印机设备的本机ip
+myip: 192.168.12.36 #插上打印机设备的本机ip,或者时域名，能访问本机的任意地址，不带http，统一目前使用http
 myport: 23123 #插上打印机设备本机运行时想要暴露的端口，任意一个没冲突的会自动注册到服务中心
 consulip: 192.168.12.12
 consulport: 8500
@@ -53,6 +53,8 @@ exeName: BrotherSetting.exe
 
 
 ### 一切配置好后运行PrintNode.exe就行
+#注意：同一个打印机只允许一次程序，建议一个打印机就一个id只运行一个程序，否则可能出问题
+
 
 # 依赖
 - adobe dc软件

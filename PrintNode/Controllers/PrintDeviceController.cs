@@ -41,20 +41,22 @@ namespace PrintNode.Controllers
             foreach (ManagementObject printJob in printJobs)
             {
                 string documentName = printJob["Document"] as string;
-                string printerName = printJob["HostPrintQueue"] as string;
                 int pagesPrinted = Convert.ToInt32(printJob["PagesPrinted"]);
+                int allPaper = Convert.ToInt32(printJob["TotalPages"]);
+
                 string jobId = Convert.ToString(printJob["JobId"]);
                 listNums++;
-                PrintRW printRW = new PrintRW()
+                PrintRW printRW = new()
                 {
                     documentName = documentName,
                     pagesPrinted = pagesPrinted,
+                    pageCount = allPaper,
+                    id = jobId,
                     jobStatus = printJob["JobStatus"] as string,
                     startTime = Convert.ToDateTime(printJob["StartTime"])
 
                 };
                 Console.WriteLine("打印任务: " + documentName);
-                Console.WriteLine("打印机名称: " + printerName);
                 Console.WriteLine("打印页数: " + pagesPrinted);
                 Console.WriteLine();
                 printJobsas.Add(printRW);
@@ -93,8 +95,6 @@ namespace PrintNode.Controllers
             }
   
             PrintStatus printStatusa = new PrintStatus { printName = Config.tag, printDescription = Config.name, listNums = listNums, statusType = statusType, statusTypeMessage = statusMessage, printJobs = printJobsas };
-            Console.WriteLine($"printStatusa = {printStatusa}");
-
             return R<PrintStatus>.success(printStatusa);
         }
 
