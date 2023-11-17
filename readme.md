@@ -4,7 +4,7 @@
 
 下面是大概的联系图，打印节点服务与主后端服务直接通过consul和rocketmq队列联系，双方互为消费者也互为生产者,整个打印流程都是异步的。
 
-![image-20231117151418065](C:/Users/qc200/AppData/Roaming/Typora/typora-user-images/image-20231117151418065.png)
+![image-20231117151418065](readme.png)
 
 
 
