@@ -135,7 +135,8 @@ namespace PrintNode.Controllers
                     try
                     {
                         // 取消打印任务
-                        printJob.InvokeMethod("Delete", null);
+                        // printJob.InvokeMethod("Delete", null);
+                        printJob.Delete();
                         Console.WriteLine("已取消打印任务，Job ID: " + jobId);
                         return R<string>.success("成功取消，但是要是别人的任务等问一声，别给别人取消了！");
                     }

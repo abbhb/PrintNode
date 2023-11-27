@@ -59,3 +59,5 @@ exeName: BrotherSetting.exe
 # 依赖
 - adobe dc软件
 - XXXSetting的exe
+- 
+BrotherSetting是兄弟打印机双面设置的exe，其他的平台自己实现即可，打包成exe并且按照参数请先传入打印机名称，在传入单双面int，在传入打印方向int即可，放在跟exe同级目录并且修改config即可
