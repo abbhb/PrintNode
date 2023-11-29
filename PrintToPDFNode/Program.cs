@@ -42,6 +42,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+int ports = CommonUtils.GetRandomPort();
+// ÐÞ¸Ä IP ºÍ¶Ë¿Ú
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Listen(System.Net.IPAddress.Parse("127.0.0.1"), ports);
+});
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

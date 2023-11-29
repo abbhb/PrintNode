@@ -32,26 +32,39 @@ namespace PrintToPDFNode
                     string filetemppath = TempFileUtil.saveFileByUrl(json.fileUrl);
                     string lastFileName = ToPDF.getLastFileName(filetemppath);
                     ToPdfResp toPdfResp = null;
-                    if (lastFileName.EndsWith("pdf"))
+                    try
                     {
-                        toPdfResp = ToPDF.ToPdfByPdf(filetemppath);
+                        if (lastFileName.EndsWith("pdf"))
+                        {
+                            toPdfResp = ToPDF.ToPdfByPdf(filetemppath);
 
-                    }
-                    else if (lastFileName.EndsWith("doc") || lastFileName.EndsWith("docx"))
-                    {
-                        toPdfResp = ToPDF.ToPdfByWord(filetemppath);
-                    }
-                    else
-                    {
-                        //通用方法
-                        toPdfResp = ToPDF.ToPdfByAny(filetemppath);
+                        }
+                        else if (lastFileName.EndsWith("doc") || lastFileName.EndsWith("docx"))
+                        {
+                            toPdfResp = ToPDF.ToPdfByWord(filetemppath);
+                        }
+                        else
+                        {
+                            //通用方法
+                            toPdfResp = ToPDF.ToPdfByAny(filetemppath);
 
+                        }
+                    }catch (Exception ex)
+                    {
+                        // 捕获转换的异常，保证服务不会异常退出,一般造成转换异常说明该文件无法打印，直接返回错误信息即可!
+                        TempFileUtil.removeFile(filetemppath);
+                        PrintDataFromPDFResp prsresp = new PrintDataFromPDFResp();
+                        prsresp.id = json.id;
+                        prsresp.message = "该文件无法转换为pdf，请检查文件格式再重试";
+                        prsresp.status = 0;
+                        RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
                     }
+                   
                     //最终结果
                     if (toPdfResp == null)
                     {
                         TempFileUtil.removeFile(filetemppath);
-                        throw new Exception("服务异常,请重试！");
+                        return;
                     }
                     else
                     {
@@ -109,7 +122,7 @@ namespace PrintToPDFNode
 
                         PrintDataFromPDFResp prsresp = new PrintDataFromPDFResp();
                         prsresp.id = json.id;
-                        prsresp.message = ex.exception.Message;
+                        prsresp.message = "未知异常，请检查文件再次尝试";
                         prsresp.status = 0;
                         RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
                     }

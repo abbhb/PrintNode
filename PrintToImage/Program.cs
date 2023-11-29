@@ -5,6 +5,7 @@
 using YamlDotNet.Serialization.NamingConventions;
 using YamlDotNet.Serialization;
 using PrintToImage;
+using PrintToPDFNode;
 
 string configFilePath = "Config.yaml"; // 替换为实际的配置文件路径
 if (File.Exists(configFilePath))
@@ -57,6 +58,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+int ports = CommonUtils.GetRandomPort();
+// 修改 IP 和端口
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Listen(System.Net.IPAddress.Parse("127.0.0.1"), ports);
+});
+
 
 var app = builder.Build();
 
