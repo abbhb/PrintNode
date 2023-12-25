@@ -51,8 +51,16 @@ namespace PrintToPDFNode
                 }
                 catch (Exception ex)
                 {
-                    
-                    return errorCallback(new MyException<List<NewLife.RocketMQ.Protocol.MessageExt>>(ex,ms.ToList()));
+                    try
+                    {
+                        return errorCallback(new MyException<List<NewLife.RocketMQ.Protocol.MessageExt>>(ex, ms.ToList()));
+                    }catch(Exception ex2)
+                    {
+                        //未知的错误，直接跳过
+                        Console.WriteLine(ex2.ToString());
+                        return true;
+                    }
+                   
                     //消费失败就推送一条回执,消费不了就不能占用资源
                 }
 

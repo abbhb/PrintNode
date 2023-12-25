@@ -1,6 +1,7 @@
 using PrintToPDFNode;
 using YamlDotNet.Serialization.NamingConventions;
 using YamlDotNet.Serialization;
+using System;
 
 //先注入config
 string configFilePath = "Config.yaml"; // 替换为实际的配置文件路径
@@ -35,6 +36,7 @@ else
 }
 
 TempFileUtil.isHavePath();
+
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
@@ -64,10 +66,48 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// 转pdf监听,处理端只用监听req的消息
-RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toPdfTopic, Config.getToPdfTopicGroup(), Config.toPdfIp, ToPdfCallBack.successCallback, ToPdfCallBack.errorCallback,tags:"req");
-rocketMQConsumer.start();
+// 不断重试
+bool connected1 = false;
+bool connected2 = false;
+while (!connected1)
+{
+    try
+    {
+        // 尝试建立连接的代码
+        // 转pdf监听,处理端只用监听req的消息
+        RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toPdfTopic, Config.getToPdfTopicGroup(), Config.toPdfIp, ToPdfCallBack.successCallback, ToPdfCallBack.errorCallback, tags: "req");
+        rocketMQConsumer.start();
+
+        connected1 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("消费者连接失败：" + e.Message);
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
 
 //生产者
-RocketMQSendCenter.toPDFRespSend.Start();
+while (!connected2)
+{
+    try
+    {
+        // 尝试建立连接的代码
+        RocketMQSendCenter.toPDFRespSend.Start();
+
+        connected2 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("生产者连接失败：" + e.Message);
+
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
+
+
 app.Run();

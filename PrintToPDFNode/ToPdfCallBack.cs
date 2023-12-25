@@ -12,8 +12,6 @@ namespace PrintToPDFNode
 {
     public class ToPdfCallBack
     {
-        // 创建哈希映射 id,次数，要求超过3次就直接消费消息
-        private static Dictionary<string, int> hashMap = new Dictionary<string, int>();
         // 定义回调函数和异常处理回调
         public static Action<List<NewLife.RocketMQ.Protocol.MessageExt>> successCallback = async result =>
         {
@@ -132,43 +130,9 @@ namespace PrintToPDFNode
             }
             catch(Exception)
             {
-                if (ex.messageExts.Count < 1)
-                {
-                    //没有消息还消费个屁
-                    return true;
-                }
-                PrintDataFileToPDFReq errors = JsonConvert.DeserializeObject<PrintDataFileToPDFReq>(ex.messageExts[0].Body.ToStr());//反序列化对象
-
-
-                if (hashMap.ContainsKey(errors.id))
-                {
-                    //之前已经错过了
-                    if (hashMap[errors.id] >= 3)
-                    {
-                        //超过三次直接消费消息,并且清理本地哈希表
-                        hashMap.Remove(errors.id);
-                        return true;
-                    }
-                    hashMap[errors.id] += 1;
-                    return false;
-                }
-                hashMap[errors.id] = 1;
-                return false;
-                //一次失败可能不是一直失败，可以拒绝消费3次
-                //失败也在本地缓存，同一id的消息超过多少次就不再重试
-
-
+                // 发生异常直接消费消息
+                return true;
             }
-            finally
-            {
-                //最终看看哈希表，要是太多数据，又是那种没有超过三次错误没被回收的，选取时间长的回收掉，最多允许存在50条
-                if (hashMap.Count > 50)
-                {
-                    //直接清空
-                    hashMap.Clear();
-                }
-            }
-
             //只有能发送回执才算消费成功，回执都无法发送的消息就消费失败
             //return true;//如果发送回执消息成功就消费消息
             //否则失败

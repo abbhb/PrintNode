@@ -85,11 +85,67 @@ app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
 
-// 转pdf监听,处理端只用监听req的消息
-RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toPrintTopic, Config.getToPrintTopicGroup(), Config.toPrintIp, ToPrintCallBack.successCallback, ToPrintCallBack.errorCallback, tags: Config.tag);
-rocketMQConsumer.start();
+
+
+// 不断重试
+bool connected1 = false;
+bool connected2 = false;
+bool connected3 = false;
+while (!connected1)
+{
+    try
+    {
+        // 尝试建立连接的代码
+        // 转pdf监听,处理端只用监听req的消息
+        RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toPrintTopic, Config.getToPrintTopicGroup(), Config.toPrintIp, ToPrintCallBack.successCallback, ToPrintCallBack.errorCallback, tags: Config.tag);
+        rocketMQConsumer.start();
+
+        connected1 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("消费者连接失败：" + e.Message);
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
 
 //生产者
-RocketMQSendCenter.toPDFRespSend.Start();
-ConsulServer.start();
+while (!connected2)
+{
+    try
+    {
+
+        //生产者
+        RocketMQSendCenter.toPDFRespSend.Start();
+
+        connected2 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("生产者连接失败：" + e.Message);
+
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
+//服务发现中心注册
+while (!connected3)
+{
+    try
+    {
+        ConsulServer.start();
+        connected3 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("服务发现中心连接失败：" + e.Message);
+
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
 app.Run();

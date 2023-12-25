@@ -42,12 +42,61 @@ else
 TempFileUtil.isHavePath();
 
 
-// 转pdf监听,处理端只用监听req的消息
-RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toImageTopic, Config.getToImageTopicGroup(), Config.toImageIp, ToImageCallBack.successCallback, ToImageCallBack.errorCallback, tags: "req");
-rocketMQConsumer.start();
+
+
+
+
+// 不断重试
+bool connected1 = false;
+bool connected2 = false;
+while (!connected1)
+{
+    try
+    {
+        // 尝试建立连接的代码
+        // 转pdf监听,处理端只用监听req的消息
+        RocketMQConsumer rocketMQConsumer = new RocketMQConsumer(Config.toImageTopic, Config.getToImageTopicGroup(), Config.toImageIp, ToImageCallBack.successCallback, ToImageCallBack.errorCallback, tags: "req");
+        rocketMQConsumer.start();
+
+        connected1 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("消费者连接失败：" + e.Message);
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
 
 //生产者
-RocketMQSendCenter.toImageRespSend.Start();
+while (!connected2)
+{
+    try
+    {
+
+        //生产者
+        RocketMQSendCenter.toImageRespSend.Start();
+
+        connected2 = true; // 连接成功后将标志位置为 true，退出循环
+    }
+    catch (Exception e)
+    {
+        // 发生异常时的处理
+        Console.WriteLine("生产者连接失败：" + e.Message);
+
+        Thread.Sleep(60 * 1000); // 等待一分钟（以毫秒为单位
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 var builder = WebApplication.CreateBuilder(args);
