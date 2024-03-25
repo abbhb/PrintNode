@@ -49,8 +49,14 @@ namespace PrintToPDFNode
                         }
                     }catch (Exception ex)
                     {
-                        // 捕获转换的异常，保证服务不会异常退出,一般造成转换异常说明该文件无法打印，直接返回错误信息即可!
-                        TempFileUtil.removeFile(filetemppath);
+                        try
+                        {
+                            // 捕获转换的异常，保证服务不会异常退出,一般造成转换异常说明该文件无法打印，直接返回错误信息即可!
+                            TempFileUtil.removeFile(filetemppath);
+                        }catch(Exception) { 
+                        
+                        }
+                       
                         PrintDataFromPDFResp prsresp = new PrintDataFromPDFResp();
                         prsresp.id = json.id;
                         prsresp.message = "该文件无法转换为pdf，请检查文件格式再重试";
@@ -76,9 +82,16 @@ namespace PrintToPDFNode
 
                             if (!response.IsSuccessStatusCode)
                             {
+                                
                                 TempFileUtil.removeFile(filetemppath);
                                 TempFileUtil.removeFile(toPdfResp.pdfPath);
-                                throw new Exception("转换端文件上传失败，请重试！");
+                                PrintDataFromPDFResp prsresp1 = new PrintDataFromPDFResp();
+                                prsresp1.id = json.id;
+                                prsresp1.message = "未知异常，请检查文件再次尝试";
+                                prsresp1.status = 0;
+                                RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp1), "resp");
+                                return;
+
                             }
                         }
 

@@ -49,34 +49,38 @@ namespace PrintToPDFNode
             // 创建Word应用程序对象
             var wordApp = new Word.Application();
 
-            // 打开Word文档
-            var doc = wordApp.Documents.Open(filePath);
-
-            // 获取总页数
-            doc.Repaginate();
-            pageCount = doc.ComputeStatistics(Word.WdStatistic.wdStatisticPages);
-
-            // 将Word文档另存为PDF
-            doc.SaveAs2(newFileName, Word.WdSaveFormat.wdFormatPDF);
-
-            // 关闭Word文档
-            doc.Close();
-
-            // 退出Word应用程序
-            wordApp.Quit();
-            // 反初始化COM库
-            CoUninitialize();
-            ToPdfResp resp = new()
+            try
             {
-                pdfPage = pageCount,
-                pdfPath = newFileName
-            };
-            return resp;
+                // 打开Word文档
+                var doc = wordApp.Documents.Open(filePath);
 
-            
-            
+                // 获取总页数
+                doc.Repaginate();
+                pageCount = doc.ComputeStatistics(Word.WdStatistic.wdStatisticPages);
 
-            return null;
+                // 将Word文档另存为PDF
+                doc.SaveAs2(newFileName, Word.WdSaveFormat.wdFormatPDF);
+
+                // 关闭Word文档
+                doc.Close();
+
+              
+                // 反初始化COM库
+                CoUninitialize();
+                ToPdfResp resp = new()
+                {
+                    pdfPage = pageCount,
+                    pdfPath = newFileName
+                };
+                return resp;
+            }catch (Exception ex)
+            {
+                return null;
+            }finally {
+                // 退出Word应用程序
+                wordApp.Quit();
+            }
+           
         }
 
 
@@ -89,12 +93,12 @@ namespace PrintToPDFNode
             string newFileName = TempFileUtil.tempPath + Path.GetRandomFileName() + ".pdf";
             // 初始化COM库
             CoInitialize(IntPtr.Zero); // 初始化COM库
+            AcroApp app = new AcroApp();
             try
             {
                 // Create the document (Can only create the AcroExch.PDDoc object using late-binding)
                 // Note using VisualBasic helper functions, have to add reference to DLL
                 // 创建Acrobat应用程序对
-                AcroApp app = new AcroApp();
                 AcroAVDoc avDoc = new AcroAVDoc();
                 // 打开要转成PDF的文件
 
@@ -122,7 +126,10 @@ namespace PrintToPDFNode
             {
                 throw ex;
             }
-            finally { CoUninitialize(); }
+            finally {
+                app.CloseAllDocs();
+                CoUninitialize();
+            }
         }
 
         private static int getPdfNums(string filePath)
