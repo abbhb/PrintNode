@@ -64,7 +64,6 @@ namespace PrintToPDFNode
                 // 关闭Word文档
                 doc.Close();
 
-              
                 // 反初始化COM库
                 CoUninitialize();
                 ToPdfResp resp = new()

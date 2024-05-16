@@ -13,6 +13,8 @@ namespace PrintToPDFNode
         private readonly Action<List<NewLife.RocketMQ.Protocol.MessageExt>> callback;
         private readonly Func<MyException<List<NewLife.RocketMQ.Protocol.MessageExt>>, Boolean> errorCallback;
 
+        // 静态变量，用于标记当前是否有任务正在执行
+        private static bool isTaskRunning = false;
         /**
          * 样例
          * nameServerAddress：192.168.12.12:9876
@@ -44,8 +46,14 @@ namespace PrintToPDFNode
             {
                 string mInfo = $"BrokerName={q.BrokerName},QueueId={q.QueueId},Length={ms.Length}";
                 Log.Info(mInfo);
+                if(isTaskRunning)
+                {
+                    // 不消费该任务，直接返回
+                    return false;
+                }
                 try
                 {
+                    isTaskRunning = true;
                     callback(ms.ToList());
                     return true;
                 }
@@ -62,7 +70,7 @@ namespace PrintToPDFNode
                     }
                    
                     //消费失败就推送一条回执,消费不了就不能占用资源
-                }
+                }finally { isTaskRunning = false; }
 
                 //   return false;//通知消息队：不消费消息
                 //return false;        //通知消息队：消费了消息
