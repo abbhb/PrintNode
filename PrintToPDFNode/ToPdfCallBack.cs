@@ -32,33 +32,9 @@ namespace PrintToPDFNode
                     ToPdfResp toPdfResp = null;
                     try
                     {
-                        if (lastFileName.EndsWith("pdf"))
-                        {
-                            toPdfResp = ToPDF.ToPdfByPdf(filetemppath);
-
-                        }
-                        else if (lastFileName.EndsWith("doc") || lastFileName.EndsWith("docx"))
-                        {
-                            try
-                            {
-                                toPdfResp = ToPDF.ToPdfByWord(filetemppath);
-                            }catch (Exception ex)
-                            {
-                                Log.Error("Word异常，使用pdf通用处理再重试!");
-                                Log.Error(ex.Message);
-                                //通用方法
-                                toPdfResp = ToPDF.ToPdfByAny(filetemppath);
-                            }
-                            
-                        }
-                        else
-                        {
-                            //通用方法
-                            toPdfResp = ToPDF.ToPdfByAny(filetemppath);
-
-                        }
-                    
-                    }catch (Exception ex)
+                        toPdfResp = ToPdfCallBackFactory.getPdfConversion(lastFileName).ConvertToPdf(filetemppath);
+                    }
+                    catch (Exception ex)
                     {
                         try
                         {
