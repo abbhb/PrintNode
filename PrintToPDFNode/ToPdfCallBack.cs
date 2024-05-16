@@ -47,6 +47,7 @@ namespace PrintToPDFNode
                             toPdfResp = ToPDF.ToPdfByAny(filetemppath);
 
                         }
+                    
                     }catch (Exception ex)
                     {
                         try
@@ -61,6 +62,8 @@ namespace PrintToPDFNode
                         prsresp.id = json.id;
                         prsresp.message = "该文件无法转换为pdf，请检查文件格式再重试";
                         prsresp.status = 0;
+                        Console.WriteLine("异常:");
+                        Console.Write(ex.Message);
                         RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
                     }
                    
