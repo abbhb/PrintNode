@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y9flAazkog0jYCCQixsSqGqnH3Qf28wdl+LONRvGdz0l5bi4xd/BN9VrzL/ogWPQByo7t1IZN69TnoIX4h7RJg==",
+  "dgSpecHash": "LPaObgsdzWA=",
   "success": true,
-  "projectFilePath": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+  "projectFilePath": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qc200\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\consul\\1.6.10.9\\consul.1.6.10.9.nupkg.sha512",

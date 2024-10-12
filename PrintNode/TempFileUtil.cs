@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using NewLife.Serialization.Json;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -45,6 +46,8 @@ namespace PrintNode
 
         public static string saveFileByName(string url,string name)
         {
+            Console.WriteLine($"saveFileByName----?:{url},name:{name}");
+
             string zhenshiname = "";
             // var fileName = GetUrlName(url);
             if (File.Exists(tempPath + name))

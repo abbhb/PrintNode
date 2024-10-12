@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+WzsV3vbbHrMpKeHp9ulLlbQPx5J74WryY1yu4TT0hiTaX4cduStazMr/Ppq/5BN/mOm4MqYosGMGaxWE6mz+Q==",
+  "dgSpecHash": "u4gVA17GPcE=",
   "success": true,
-  "projectFilePath": "D:\\C#\\PrintNode\\PrintToImage\\PrintToImage.csproj",
+  "projectFilePath": "G:\\C#\\PrintNode\\PrintToImage\\PrintToImage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qc200\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\itext\\8.0.1\\itext.8.0.1.nupkg.sha512",

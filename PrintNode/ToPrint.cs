@@ -48,7 +48,7 @@ namespace PrintNode
                 // 打开要转成PDF的文件
                 Console.WriteLine($"filePath:{filePath},fileName:{filename}");
                 avDoc.Open(filePath, filename);
-                _pdDoc = avDoc.GetPDDoc();
+                _pdDoc = avDoc.GetPDDoc() as CAcroPDDoc;
                 int startPage = printReq.startNum;
                 int endPage = printReq.endNum;
                 //最大份数不在node上约束

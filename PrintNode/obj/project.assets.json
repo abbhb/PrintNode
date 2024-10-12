@@ -6207,6 +6207,7 @@
       "Consul >= 1.6.10.9",
       "Microsoft.AspNet.Cors >= 5.3.0-preview1",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
+      "Microsoft.DotNet.PlatformAbstractions >= 1.1.0",
       "Microsoft.Extensions.Logging.Console >= 3.1.32",
       "NLog.Extensions.Logging >= 5.3.4",
       "NewLife.RocketMQ >= 2.5.2023.904",
@@ -6224,24 +6225,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\qc200\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\qc200\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+      "projectUniqueName": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
       "projectName": "PrintNode",
-      "projectPath": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+      "projectPath": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
       "packagesPath": "C:\\Users\\qc200\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\PrintNode\\PrintNode\\obj\\",
+      "outputPath": "G:\\C#\\PrintNode\\PrintNode\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\qc200\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6261,6 +6257,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6278,6 +6279,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.11, )"
+          },
+          "Microsoft.DotNet.PlatformAbstractions": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           },
           "Microsoft.Extensions.Logging.Console": {
             "target": "Package",
@@ -6355,7 +6360,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -6,16 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 	<ItemGroup>
-		
-		<COMReference Include="Acrobat">
-			<WrapperTool>tlbimp</WrapperTool>
-			<VersionMinor>1</VersionMinor>
-			<VersionMajor>1</VersionMajor>
-			<Guid>e64169b3-3592-47d2-816e-602c5c13f328</Guid>
-			<Lcid>0</Lcid>
-			<Isolated>false</Isolated>
-			<EmbedInteropTypes>true</EmbedInteropTypes>
-		</COMReference>
 		<COMReference Include="AcroPDFLib">
 			<WrapperTool>tlbimp</WrapperTool>
 			<VersionMinor>0</VersionMinor>
@@ -79,17 +69,65 @@
 		  <Isolated>false</Isolated>
 		  <EmbedInteropTypes>true</EmbedInteropTypes>
 		</COMReference>
-		<COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+		<COMReference Include="AcroIEClientStub">
 		  <WrapperTool>tlbimp</WrapperTool>
-		  <VersionMinor>4</VersionMinor>
-		  <VersionMajor>2</VersionMajor>
-		  <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>04c567cb-a52f-41f4-9628-10cc965e7179</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
 		</COMReference>
-		<COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+		<COMReference Include="ACRODISTXLib">
 		  <WrapperTool>tlbimp</WrapperTool>
-		  <VersionMinor>4</VersionMinor>
-		  <VersionMajor>2</VersionMajor>
-		  <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>317da881-ecc5-11d1-b976-00600802db86</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcrobatScan">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>353c4f99-870a-4deb-81e9-feb091883df1</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PrinterCustomActionsLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>2ffdc44d-1269-4e67-9bc0-2486240e97f8</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="{78165d71-df28-11d3-9a89-005004a56d53}">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>78165d71-df28-11d3-9a89-005004a56d53</Guid>
+		</COMReference>
+		<COMReference Include="AcrobatAccessLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>3</VersionMajor>
+		  <Guid>c523f390-9c83-11d3-9094-00104bd0d535</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcrobatWeb2PDF">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>c154ad8e-5b51-436e-83e2-b04e068c00e2</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
 		</COMReference>
 	</ItemGroup>
   <ItemGroup>
@@ -98,6 +136,7 @@
 	  <PackageReference Include="iTextSharp" Version="5.5.13.3" />
 	  <PackageReference Include="Microsoft.AspNet.Cors" Version="5.3.0-preview1" />
 	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+	  <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="1.1.0" />
 	  <PackageReference Include="NewLife.RocketMQ" Version="2.5.2023.904" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	  <PackageReference Include="PdfiumViewer" Version="2.13.0" />

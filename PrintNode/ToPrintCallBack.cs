@@ -23,7 +23,7 @@ namespace PrintNode
                 {
                     Console.WriteLine($"JSON?:{json}");
                     // 保存源文件到本地
-                    string fileNames = TempFileUtil.saveFileByName(json.filePDFUrl,json.name);
+                    string fileNames = TempFileUtil.saveFileByName(json.filePDFUrl,json.name+".pdf");
                     string filetemppath = TempFileUtil.tempPath + fileNames;
                     ToPrintResp printR = null;
                     ToPrint toPrintResp = new ToPrint();

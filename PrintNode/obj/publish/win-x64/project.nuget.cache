@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x3yYvTQgp3yZ4O6C/l2KWhkLwd8Etl3TmA/uh8rTe17Ge1K2kEKvoV94BnCeiLp7VPPCRUVsj0oTc10ZswsMjg==",
+  "dgSpecHash": "x4+vxWY0u3c=",
   "success": true,
-  "projectFilePath": "D:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+  "projectFilePath": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\qc200\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\consul\\1.6.10.9\\consul.1.6.10.9.nupkg.sha512",
@@ -137,9 +137,9 @@
     "C:\\Users\\qc200\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\qc200\\.nuget\\packages\\yamldotnet\\13.7.0\\yamldotnet.13.7.0.nupkg.sha512",
-    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.11\\microsoft.netcore.app.runtime.win-x64.7.0.11.nupkg.sha512",
-    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.11.nupkg.sha512",
-    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.11\\microsoft.aspnetcore.app.runtime.win-x64.7.0.11.nupkg.sha512"
+    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.20\\microsoft.netcore.app.runtime.win-x64.7.0.20.nupkg.sha512",
+    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.20\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.20.nupkg.sha512",
+    "C:\\Users\\qc200\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.20\\microsoft.aspnetcore.app.runtime.win-x64.7.0.20.nupkg.sha512"
   ],
   "logs": [
     {

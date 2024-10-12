@@ -11,6 +11,7 @@
           "Consul": "1.6.10.9",
           "Microsoft.AspNet.Cors": "5.3.0-preview1",
           "Microsoft.AspNetCore.OpenApi": "7.0.11",
+          "Microsoft.DotNet.PlatformAbstractions": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "3.1.32",
           "NLog.Extensions.Logging": "5.3.4",
           "NewLife.RocketMQ": "2.5.2023.904",
@@ -24,7 +25,8 @@
           "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
           "YamlDotNet": "13.7.0",
           "iTextSharp": "5.5.13.3",
-          "itext7": "8.0.1"
+          "itext7": "8.0.1",
+          "Interop.Acrobat": "1.1.0.0"
         },
         "runtime": {
           "PrintNode.dll": {}
@@ -984,6 +986,14 @@
             "fileVersion": "13.7.0.0"
           }
         }
+      },
+      "Interop.Acrobat/1.1.0.0": {
+        "runtime": {
+          "Interop.Acrobat.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
       }
     }
   },
@@ -1776,6 +1786,11 @@
       "sha512": "sha512-RKkoQSCyk/94N20SL3U15hWAqBVXHu+59upcPi8R2uhrcAalyVa4Y/vYdXQ7MXQ71Lut//DH0tLcYByAkGmXhA==",
       "path": "yamldotnet/13.7.0",
       "hashPath": "yamldotnet.13.7.0.nupkg.sha512"
+    },
+    "Interop.Acrobat/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
