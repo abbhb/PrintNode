@@ -9,6 +9,7 @@
         public string Rtopic { get; set; }
 
         public string Tag { get; set; }
+        public string PrintSecret { get; set; }
 
 
         public string Name { get; set; }

@@ -24,6 +24,7 @@ if (File.Exists(configFilePath))
             Config.toPrintTopic = configs.Topic;
             Config.toPrintTopicR = configs.Rtopic;
             Config.tag = configs.Tag;
+            Config.printSecret = configs.PrintSecret;
             Config.name = configs.Name;
             Config.Accesskey = configs.Accesskey;
             Config.Secretkey = configs.Secretkey;

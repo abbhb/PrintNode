@@ -19,6 +19,7 @@ namespace PrintNode
             };
             IDictionary<string, string> meta = new Dictionary<string, string>();
             meta.Add("ZName", Config.name);
+            meta.Add("ZSecret", Config.printSecret);
             var registration = new AgentServiceRegistration()
             {
                 Checks = new[] { httpCheck },
