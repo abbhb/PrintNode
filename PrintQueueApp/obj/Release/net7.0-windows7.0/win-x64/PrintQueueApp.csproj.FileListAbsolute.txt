@@ -1,0 +1,6 @@
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\PrintQueueApp.csproj.AssemblyReference.cache
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\MainWindow.g.cs
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\App.g.cs
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\GeneratedInternalTypeHelper.g.cs
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\PrintQueueApp_MarkupCompile.cache
+G:\C#\PrintNode\PrintQueueApp\obj\Release\net7.0-windows7.0\win-x64\PrintQueueApp_MarkupCompile.lref

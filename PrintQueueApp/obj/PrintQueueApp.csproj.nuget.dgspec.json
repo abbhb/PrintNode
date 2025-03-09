@@ -1,0 +1,245 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\C#\\PrintNode\\PrintQueueApp\\PrintQueueApp.csproj": {}
+  },
+  "projects": {
+    "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+        "projectName": "PrintNode",
+        "projectPath": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj",
+        "packagesPath": "C:\\Users\\qc200\\.nuget\\packages\\",
+        "outputPath": "G:\\C#\\PrintNode\\PrintNode\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\qc200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.9, )"
+            },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.3.0-preview1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.DotNet.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.3.4, )"
+            },
+            "NewLife.RocketMQ": {
+              "target": "Package",
+              "version": "[2.5.2023.904, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "PInvoke.Windows.Core": {
+              "target": "Package",
+              "version": "[0.7.124, )"
+            },
+            "PdfiumViewer": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
+            "PdfiumViewer.Native.x86_64.v8-xfa": {
+              "target": "Package",
+              "version": "[2018.4.8.256, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2.23479.14, )"
+            },
+            "System.Management": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2.23479.6, )"
+            },
+            "System.Runtime.InteropServices.WindowsRuntime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[13.7.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\C#\\PrintNode\\PrintQueueApp\\PrintQueueApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\C#\\PrintNode\\PrintQueueApp\\PrintQueueApp.csproj",
+        "projectName": "PrintQueueApp",
+        "projectPath": "G:\\C#\\PrintNode\\PrintQueueApp\\PrintQueueApp.csproj",
+        "packagesPath": "C:\\Users\\qc200\\.nuget\\packages\\",
+        "outputPath": "G:\\C#\\PrintNode\\PrintQueueApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\qc200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows10.0.17763.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows10.0.17763": {
+            "targetAlias": "net7.0-windows10.0.17763.0",
+            "projectReferences": {
+              "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj": {
+                "projectPath": "G:\\C#\\PrintNode\\PrintNode\\PrintNode.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net7.0-windows10.0.17763": {
+          "targetAlias": "net7.0-windows10.0.17763.0",
+          "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[5.2.2-ci928, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "MaterialDesignThemes.Wpf": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.17763.55, 10.0.17763.55]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref.Windows": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

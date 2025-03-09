@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "AWI1xOQkPQBtP6D6CGTh8f2tz5V8za0558ko2Re4pz8=",
+  "Hash": "OMqR0yOhbp/+Nizd+m2UvKNv+WsPY7683H51rliA3xU=",
   "Source": "PrintToPDFNode",
   "BasePath": "_content/PrintToPDFNode",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

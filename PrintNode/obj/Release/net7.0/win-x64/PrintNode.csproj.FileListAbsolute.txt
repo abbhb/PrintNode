@@ -789,3 +789,7 @@ G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\refint\PrintNode.dll
 G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PrintNode.pdb
 G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\PrintNode.genruntimeconfig.cache
 G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\ref\PrintNode.dll
+G:\C#\PrintNode\PrintNode\bin\Release\net7.0\win-x64\PrintNode.staticwebassets.endpoints.json
+G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\staticwebassets.build.endpoints.json
+G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\staticwebassets\msbuild.PrintNode.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+G:\C#\PrintNode\PrintNode\obj\Release\net7.0\win-x64\staticwebassets.upToDateCheck.txt

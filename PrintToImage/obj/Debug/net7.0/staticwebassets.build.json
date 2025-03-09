@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "sPIB+ON0Veqa+Aw4jyYAMmHn7aCUh0efXu7RGt5yuQY=",
+  "Hash": "f2L7GsN2KQkBVakohE9//HshZCjXS75zDCuSgQ12kQI=",
   "Source": "PrintToImage",
   "BasePath": "_content/PrintToImage",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

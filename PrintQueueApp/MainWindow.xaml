@@ -1,0 +1,239 @@
+﻿<Window x:Class="PrintQueueApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PrintQueueApp"
+        xmlns:models="clr-namespace:PrintQueueApp.Models"
+        WindowState="Maximized"
+        WindowStyle="None"
+        TextOptions.TextFormattingMode="Display"
+        FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <!-- 打印任务项模板 -->
+        <DataTemplate DataType="{x:Type models:PrintJob}">
+            <materialDesign:Card Margin="8" Style="{StaticResource MaterialDesignElevatedCard}">
+                <Grid Width="800">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- 左侧状态指示 -->
+                    <Border Width="4" Background="{Binding Status, Converter={StaticResource StatusToColorConverter}}"
+                            Margin="0,0,12,0"/>
+
+                    <!-- 动态详情列 -->
+                    <ItemsControl Grid.Column="1" ItemsSource="{Binding Details}"
+                                  VerticalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="12,0" Orientation="Vertical">
+                                    <TextBlock Text="{Binding Key}" Foreground="#666" FontSize="12"/>
+                                    <TextBlock Text="{Binding Value}" FontSize="14"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- 右侧操作区 -->
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="12">
+                        <Button Style="{StaticResource MaterialDesignIconButton}"
+                                Name="cancelPrintJob"
+                                Command="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext.ClickCancelPrintJob}"
+                                CommandParameter="{Binding}">
+                            <materialDesign:PackIcon Kind="Close" Width="24" Height="24"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+        </DataTemplate>
+
+        <!-- 日志项模板 -->
+        <DataTemplate DataType="{x:Type models:LogEntry}">
+            <Grid Margin="4,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="{Binding Level, Converter={StaticResource LogLevelToColorConverter}}"
+                        CornerRadius="2" Padding="4,2" Margin="0,0,8,0">
+                    <TextBlock Text="{Binding Level}" Foreground="White" FontWeight="SemiBold"/>
+                </Border>
+
+                <TextBlock Grid.Column="1" Text="{Binding Message}" 
+                           FontFamily="Consolas" TextWrapping="Wrap"/>
+            </Grid>
+        </DataTemplate>
+
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+
+        <!-- 标题栏 -->
+        <materialDesign:Card Grid.Row="0" Style="{DynamicResource MaterialDesignElevatedCard}" 
+                            UniformCornerRadius="0" Margin="0" Padding="16,8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <materialDesign:PackIcon Kind="PrinterWireless" Width="32" Height="32"
+                                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+
+                <TextBlock Grid.Column="1" Text="智能打印中心" FontSize="24" Margin="16,0"
+                         VerticalAlignment="Center" FontWeight="SemiBold"/>
+
+                <Button Grid.Column="2" Style="{StaticResource MaterialDesignIconButton}"
+                        Click="MinimizeButton_Click">
+                    <materialDesign:PackIcon Kind="WindowMinimize"/>
+                </Button>
+            </Grid>
+        </materialDesign:Card>
+
+        <!-- 主内容区改为左右布局 -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="850"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 左边打印队列 -->
+            <ScrollViewer Grid.Column="0" Padding="16">
+                <ListView ItemsSource="{Binding PrintJobs}" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+          
+            </ScrollViewer>
+
+            <!-- 右边状态信息 -->
+            <materialDesign:Card Grid.Column="1" Margin="0,16,16,16" 
+                           Style="{StaticResource MaterialDesignElevatedCard}">
+                <ScrollViewer Padding="16">
+                    <StackPanel>
+                        <!-- 打印机状态概览 -->
+                        <materialDesign:Card Margin="0,0,0,16" 
+                                       Style="{StaticResource MaterialDesignOutlinedCard}">
+                            <StackPanel>
+                                <TextBlock Text="打印机状态" 
+                                     Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                     Margin="0,0,0,8"/>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,4">
+                                    <materialDesign:PackIcon Kind="Printer" Width="20"
+                                                        Margin="0,0,8,0"/>
+                                    <TextBlock Text="名称:" Width="30" Foreground="#666"/>
+
+                                    <TextBlock Text="{Binding PrintStatusObject.PrintName}"
+                                         FontWeight="SemiBold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,4">
+                                    <materialDesign:PackIcon Kind="Printer" Width="20"
+                             Margin="0,0,8,0"/>
+                                    <TextBlock Text="描述:" Width="30" Foreground="#666"/>
+                                    <TextBlock Text="{Binding PrintStatusObject.PrintDescription}"
+                                        FontWeight="SemiBold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,4">
+                                    <TextBlock Text="状态:" Width="30" Foreground="#666"/>
+                                    <TextBlock Text="{Binding PrintStatusObject.StatusTypeMessage}"
+                                         Foreground="{Binding PrintStatusObject.StatusType, 
+                                         Converter={StaticResource PrinterStatusToMessageConverter}}"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,4">
+                                    <TextBlock Text="队列任务数:" Width="70" Foreground="#666"/>
+                                    <TextBlock Text="{Binding PrintStatusObject.ListNums}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </materialDesign:Card>
+
+                        <!-- 耗材状态 -->
+                        <materialDesign:Card Style="{StaticResource MaterialDesignOutlinedCard}">
+                            <StackPanel>
+                                <TextBlock Text="耗材信息" 
+                                     Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                     Margin="0,0,0,8"/>
+                                <!--ItemsSource="{Binding PrintStatusObject.Supplies}"-->
+                                <ItemsControl >
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Margin="0,4">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="60"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <materialDesign:PackIcon Kind="Ink" Width="20"
+                                                                    Margin="0,0,8,0"/>
+                                                <TextBlock Grid.Column="1" 
+                                                       Text="{Binding Key}"/>
+                                                <ProgressBar Grid.Column="2" 
+                                                         Value="{Binding Value}"
+                                                         Minimum="0" Maximum="100"
+                                                         Height="8"
+                                                         Style="{StaticResource MaterialDesignDeterminateProgressBar}"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </materialDesign:Card>
+
+                        <!-- 在打印机状态卡下方添加 -->
+                        <materialDesign:Card Grid.Column="1" Margin="0,16,16,16" 
+                   Style="{StaticResource MaterialDesignOutlinedCard}">
+                            <StackPanel>
+                                <TextBlock Text="服务状态" 
+                 Style="{StaticResource MaterialDesignSubtitle1TextBlock}"/>
+
+                                <ItemsControl ItemsSource="{Binding ServiceStatusCollection}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid Margin="0,4">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Ellipse Width="10" Height="10" 
+                               Fill="{Binding StatusColor}"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding ServiceName}"
+                                 Margin="8,0"/>
+                                                <TextBlock Grid.Column="2" Text="{Binding LastUpdate}"
+                                 Foreground="#666"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </StackPanel>
+                </ScrollViewer>
+            </materialDesign:Card>
+        </Grid>
+
+        <!-- 日志区 -->
+        <materialDesign:Card Grid.Row="2" Style="{DynamicResource MaterialDesignElevatedCard}" 
+                            Margin="16,0,16,16">
+            <ScrollViewer x:Name="logScrollViewer" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding LogEntries}"/>
+            </ScrollViewer>
+        </materialDesign:Card>
+    </Grid>
+</Window>

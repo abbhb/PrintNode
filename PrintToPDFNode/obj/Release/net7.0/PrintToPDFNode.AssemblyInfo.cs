@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrintToPDFNode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5481d849c96591c3ac3ac642cf12c13434358e87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99538fd4ab411de2a3f7eaf97c9776c720aeb3bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrintToPDFNode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrintToPDFNode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

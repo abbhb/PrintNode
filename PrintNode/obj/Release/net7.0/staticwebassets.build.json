@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "tQ/D+3xR/P+wIzExqXSyyJjw7Me496Zcnb46pTqhYrw=",
+  "Hash": "zUByZG9JTu/Hpbx7hoNYxSg88KuFueJYzyGzxMfSUXA=",
   "Source": "PrintNode",
   "BasePath": "_content/PrintNode",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
