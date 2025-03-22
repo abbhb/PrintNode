@@ -20,6 +20,7 @@ using System.Runtime.CompilerServices;
 using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 using System.Management;
 using System.Text;
+using System.Diagnostics;
 
 namespace PrintQueueApp
 {
@@ -34,8 +35,69 @@ namespace PrintQueueApp
         }= new();
 
         private ConsoleInterceptor _interceptor;
+        // 在日志管理类中添加以下代码
+        private const int MaxInMemoryLogs = 50; // 内存保留最近500条
+        private readonly object _fileLock = new object();
+        private Timer _autoFlushTimer;
 
+        private void WriteLogToFile(LogEntry entry)
+        {
+            lock (_fileLock)
+            {
+                try
+                {
+                    var logLine = $"[{entry.Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{entry.Level}] {entry.Message}";
+                    File.AppendAllText(GetLogFilePath(), logLine + Environment.NewLine);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"日志写入失败: {ex.Message}");
+                }
+            }
+        }
 
+        private void FlushLogsToFile()
+        {
+            Dispatcher.Invoke(() =>
+            {
+                if (LogEntries.Count == 0) return;
+
+                var logsToSave = LogEntries.ToList();
+
+                Task.Run(() =>
+                {
+                    lock (_fileLock)
+                    {
+                        try
+                        {
+                            var lines = logsToSave.Select(entry =>
+                                $"[{entry.Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{entry.Level}] {entry.Message}");
+                            File.AppendAllLines(GetLogFilePath(), lines);
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine($"日志转存失败: {ex.Message}");
+                        }
+                    }
+                });
+
+                // 清空内存日志（保留最后50条）
+                var keepCount = Math.Min(50, LogEntries.Count);
+                var removeCount = LogEntries.Count - keepCount;
+
+                for (int i = 0; i < removeCount; i++)
+                {
+                    LogEntries.RemoveAt(0);
+                }
+            });
+        }
+
+        private string GetLogFilePath()
+        {
+            var logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs");
+            Directory.CreateDirectory(logDir);
+            return Path.Combine(logDir, $"app_{DateTime.Today:yyyyMMdd}.log");
+        }
 
         // 服务状态集合
         public ObservableCollection<ServiceStatus> ServiceStatusCollection { get; }
@@ -84,13 +146,13 @@ namespace PrintQueueApp
                     {
                         JobId = int.Parse(rw.id),
                         JobName = rw.documentName,
-                        Status = rw.jobStatus,
+                        Status = rw.jobStatus== null ? " ":rw.jobStatus,
                         Details = {
                             new KeyValuePair<string, string>("任务ID", $"{rw.id}"),
                             new KeyValuePair<string, string>("任务名", $"{rw.documentName}"),
                             new KeyValuePair<string, string>("页数", $"{rw.pagesPrinted}/{rw.pageCount}"),
                             new KeyValuePair<string, string>("状态", rw.jobStatus),
-                            new KeyValuePair<string, string>("开始时间", rw.startTime.ToString("yyyy-MM-dd HH:mm:ss"))
+                            new KeyValuePair<string, string>("提交时间", rw.jobSubmitTime.ToString("yyyy-MM-dd HH:mm:ss"))
                         }
                         // 其他属性映射...
                     });
@@ -187,21 +249,29 @@ namespace PrintQueueApp
 
         private void LogToUI(string message, LogLevel logLevel)
         {
+            var newEntry = new LogEntry
+            {
+                Timestamp = DateTime.Now,
+                Message = message,
+                Level = logLevel,
+            };
             Dispatcher.Invoke(() =>
             {
-                LogEntries.Add(new LogEntry
-                {
-                    Timestamp = DateTime.Now,
-                    Message = message,
-                    Level = logLevel,
-                });
+                LogEntries.Add(newEntry);
 
-                // 自动滚动到底部
+                // 保持内存日志数量
+                while (LogEntries.Count > MaxInMemoryLogs)
+                {
+                    LogEntries.RemoveAt(0);
+                }
+
                 if (logScrollViewer.VerticalOffset == logScrollViewer.ScrollableHeight)
                 {
                     logScrollViewer.ScrollToEnd();
                 }
             });
+            // 异步写入文件（线程安全）
+            Task.Run(() => WriteLogToFile(newEntry));
         }
 
         private void LoadDemoData()
@@ -438,7 +508,8 @@ namespace PrintQueueApp
             if (sender is not PrintJob job) return false;
             if (IsLoading) return false;
             if (job is null) return false;
-            if (job.Status.Contains("等待")|| job.Status.Contains("正在后台打印") || job.Status.Contains("正在打印"))
+            if (job.Status is null) return true;
+            if (!job.Status.Contains("取消"))
             {
                 return true;
             }

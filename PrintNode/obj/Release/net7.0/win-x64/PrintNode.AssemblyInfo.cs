@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrintNode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99538fd4ab411de2a3f7eaf97c9776c720aeb3bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e639515d98118797d68b4bb9854145a69018490")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrintNode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrintNode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

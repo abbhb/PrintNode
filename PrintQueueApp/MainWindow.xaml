@@ -95,7 +95,7 @@
                 <materialDesign:PackIcon Kind="PrinterWireless" Width="32" Height="32"
                                         Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
 
-                <TextBlock Grid.Column="1" Text="智能打印中心" FontSize="24" Margin="16,0"
+                <TextBlock Grid.Column="1" Text="打印机监视器" FontSize="24" Margin="16,0"
                          VerticalAlignment="Center" FontWeight="SemiBold"/>
 
                 <Button Grid.Column="2" Style="{StaticResource MaterialDesignIconButton}"
@@ -111,13 +111,20 @@
                 <ColumnDefinition Width="850"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
+      
             <!-- 左边打印队列 -->
-            <ScrollViewer Grid.Column="0" Padding="16">
-                <ListView ItemsSource="{Binding PrintJobs}" 
-                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
-          
-            </ScrollViewer>
+            <StackPanel Grid.Column="0">
+                <!-- 新增打印队列标题 -->
+                <TextBlock Text="打印队列" 
+               Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+               Margin="16,16,16,8"
+               FontWeight="SemiBold"/>
+                <ScrollViewer Padding="16">
+                    <ListView ItemsSource="{Binding PrintJobs}" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+                </ScrollViewer>
+            </StackPanel>
+
 
             <!-- 右边状态信息 -->
             <materialDesign:Card Grid.Column="1" Margin="0,16,16,16" 
@@ -228,12 +235,21 @@
             </materialDesign:Card>
         </Grid>
 
-        <!-- 日志区 -->
+
+        <!-- 日志区（添加标题） -->
         <materialDesign:Card Grid.Row="2" Style="{DynamicResource MaterialDesignElevatedCard}" 
-                            Margin="16,0,16,16">
-            <ScrollViewer x:Name="logScrollViewer" VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding LogEntries}"/>
-            </ScrollViewer>
+                    Margin="16,0,16,16">
+            <DockPanel>
+                <!-- 新增日志标题 -->
+                <TextBlock DockPanel.Dock="Top" 
+                   Text="系统日志" 
+                   Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                   Margin="16,8"
+                   FontWeight="SemiBold"/>
+                <ScrollViewer x:Name="logScrollViewer" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding LogEntries}"/>
+                </ScrollViewer>
+            </DockPanel>
         </materialDesign:Card>
     </Grid>
 </Window>

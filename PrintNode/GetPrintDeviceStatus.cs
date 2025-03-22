@@ -1,4 +1,5 @@
 ﻿using NewLife;
+using System.Globalization;
 using System.Management;
 
 namespace PrintNode
@@ -40,6 +41,30 @@ namespace PrintNode
             
         }
 
+        private static DateTime GetDateTime(string time)
+        {
+            if (time == null){
+                return DateTime.Now;
+            }
+            string input = time;
+            // 提取并转换时区偏移
+            string offsetPart = input.Substring(input.Length - 4);
+            int offsetMinutes = int.Parse(offsetPart.Substring(1));
+            TimeSpan offset = TimeSpan.FromMinutes(offsetMinutes);
+            string formattedOffset = $"{(offsetPart[0] == '+' ? "+" : "-")}{offset.Hours:D2}:{offset.Minutes:D2}";
+
+            // 构建修正后的字符串
+            string correctedInput = input.Substring(0, input.Length - 4) + formattedOffset;
+
+            // 解析为 DateTimeOffset
+            DateTimeOffset dto = DateTimeOffset.ParseExact(
+                correctedInput,
+                "yyyyMMddHHmmss.ffffffzzz",
+                CultureInfo.InvariantCulture
+            );
+            return dto.DateTime;
+        }
+
         public static PrintNode.PrintStatus getStatus()
         {
 
@@ -67,7 +92,8 @@ namespace PrintNode
                     pageCount = allPaper,
                     id = jobId,
                     jobStatus = printJob["JobStatus"] as string,
-                    startTime = Convert.ToDateTime(printJob["StartTime"])
+                    startTime = Convert.ToDateTime(printJob["StartTime"]),
+                    jobSubmitTime = GetDateTime(Convert.ToString(printJob["TimeSubmitted"]))
 
                 };
                 Console.WriteLine("打印任务: " + documentName);

@@ -27,9 +27,29 @@ namespace PrintNode.Controllers
         // 获取该打印机状态
         // GET api/<PrintDeviceController>/status
         [HttpGet("status")]
-        public R<PrintStatus>  GetStatus()
+        public R<PrintStatusEasyOAVO>  GetStatus()
         {
-            return R<PrintStatus>.success(GetPrintDeviceStatus.getStatus());
+            PrintStatus printStatus = GetPrintDeviceStatus.getStatus();
+            // 转换VO PrintStatusEasyOAVO
+            PrintStatusEasyOAVO printStatusEasyOAVO = new PrintStatusEasyOAVO();
+            printStatusEasyOAVO.listNums = printStatus.listNums;
+            printStatusEasyOAVO.printDescription = printStatus.printDescription;
+            printStatusEasyOAVO.printName = printStatus.printName;
+            printStatusEasyOAVO.printJobs = new List<PrintRWEasyOAVO>();
+            printStatusEasyOAVO.statusType = printStatus.statusType;
+            printStatusEasyOAVO.statusTypeMessage = printStatus.statusTypeMessage;
+            foreach (PrintRW printRW in printStatus.printJobs)
+            {
+                PrintRWEasyOAVO printRWEasyOAVO = new PrintRWEasyOAVO();
+                printRWEasyOAVO.documentName = printRW.documentName;
+                printRWEasyOAVO.id = printRW.id;
+                printRWEasyOAVO.pageCount = printRW.pageCount;
+                printRWEasyOAVO.pagesPrinted = printRW.pagesPrinted;
+                printRWEasyOAVO.jobStatus = printRW.jobStatus;
+                printRWEasyOAVO.startTime = printRW.startTime;
+                printStatusEasyOAVO.printJobs.Add(printRWEasyOAVO);
+            }
+            return R<PrintStatusEasyOAVO>.success(printStatusEasyOAVO);
         }
 
 

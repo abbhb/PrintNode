@@ -25,7 +25,7 @@ namespace PrintQueueApp.Models
                 OnPropertyChanged();
             }
         }
-        private string _status;
+        private string _status = "未知状态";
 
         public string Status
         {
