@@ -19,5 +19,7 @@
 
         //是否纵向
         public int landscape;//默认纵向
+
+        public int bShrinkToFit;// 默认不缩放 0（缩放容易出现问题）
     }
 }

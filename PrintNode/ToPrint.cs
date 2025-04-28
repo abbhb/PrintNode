@@ -95,7 +95,13 @@ namespace PrintNode
                 process.WaitForExit();
                 process.Close();
                 //Console.WriteLine($"当前的配置：duplex:{settings.Duplex},ori:{settings.DefaultPageSettings.Landscape}");
-                avDoc.PrintPagesSilent(startPage-1, endPage-1, 2,1,1);
+                // PrintPagesSilent bShrinkToFit 1:可用时缩放到适合纸张大小（会容易导致字符异常） 0:不缩放
+                int bShrinkToFit = 0;
+                if (!printReq.bShrinkToFit.Equals(1))
+                {
+                    bShrinkToFit = 1;
+                }
+                avDoc.PrintPagesSilent(startPage-1, endPage-1, 2,1, bShrinkToFit);
                 //得关闭
                 avDoc.Close(0);
                 app.Exit();
