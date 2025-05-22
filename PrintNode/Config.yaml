@@ -1,0 +1,14 @@
+﻿ip: 192.168.12.xx:9876
+topic: print_send_msg
+rtopic: print_send_msg_r
+tag: ceshi_1 #tag必须唯一
+printSecret: xxx
+name: 测试电脑
+accesskey: 
+secretkey: 
+myip: 192.168.12.xx
+myport: 23123
+consulip: 192.168.12.xx
+consulport: 8500
+driveName: 2240-Dl
+exeName: BrotherSetting.exe

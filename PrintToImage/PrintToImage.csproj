@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+     <PackageReference Include="itext7" Version="8.0.1" />
+	  <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+	  <PackageReference Include="NewLife.RocketMQ" Version="2.5.2023.904" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="PdfiumViewer" Version="2.13.0" />
+	  <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.32" />
+	  <PackageReference Include="NLog.Extensions.Logging" Version="5.3.4" />
+	  <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+	  <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
+	  <PackageReference Include="YamlDotNet" Version="13.7.0" />
+  </ItemGroup>
+
+</Project>

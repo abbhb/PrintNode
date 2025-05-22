@@ -1,0 +1,155 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+	<ItemGroup>
+		<COMReference Include="AcroPDFLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>05bfd3f1-6319-4f30-b752-c7a22889bcc4</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="FileViewLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>a4214abb-6c96-4566-accb-9a6767afb285</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AdobePDFMakerForOffice">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>ea8d486a-09e6-411f-b452-78f075acc8cc</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AdobePDFMakerX">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>cbd71df4-5aed-11d2-bc74-0060979c3633</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="ACTIVEXLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>0</VersionMinor>
+			<VersionMajor>1</VersionMajor>
+			<Guid>012f24c1-35b0-11d0-bf2d-0000e8d0d146</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PMCObjLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>a1b0de63-7454-4184-b5b6-6acfdac5c9a6</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PrinterExtensionLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>91ce54ee-c67c-4b46-a4ff-99416f27a8bf</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcroIEClientStub">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>04c567cb-a52f-41f4-9628-10cc965e7179</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="ACRODISTXLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>317da881-ecc5-11d1-b976-00600802db86</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcrobatScan">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>353c4f99-870a-4deb-81e9-feb091883df1</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="PrinterCustomActionsLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>2ffdc44d-1269-4e67-9bc0-2486240e97f8</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="{78165d71-df28-11d3-9a89-005004a56d53}">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>78165d71-df28-11d3-9a89-005004a56d53</Guid>
+		</COMReference>
+		<COMReference Include="AcrobatAccessLib">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>3</VersionMajor>
+		  <Guid>c523f390-9c83-11d3-9094-00104bd0d535</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="AcrobatWeb2PDF">
+		  <WrapperTool>tlbimp</WrapperTool>
+		  <VersionMinor>0</VersionMinor>
+		  <VersionMajor>1</VersionMajor>
+		  <Guid>c154ad8e-5b51-436e-83e2-b04e068c00e2</Guid>
+		  <Lcid>0</Lcid>
+		  <Isolated>false</Isolated>
+		  <EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+	</ItemGroup>
+  <ItemGroup>
+	  <PackageReference Include="Consul" Version="1.6.10.9" />
+	  <PackageReference Include="itext7" Version="8.0.1" />
+	  <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+	  <PackageReference Include="Microsoft.AspNet.Cors" Version="5.3.0-preview1" />
+	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+	  <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="1.1.0" />
+	  <PackageReference Include="NewLife.RocketMQ" Version="2.5.2023.904" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="PdfiumViewer" Version="2.13.0" />
+	  <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa" Version="2018.4.8.256" />
+	  <PackageReference Include="PInvoke.Windows.Core" Version="0.7.124" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.32" />
+	  <PackageReference Include="NLog.Extensions.Logging" Version="5.3.4" />
+	  <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+	  <PackageReference Include="System.Management" Version="8.0.0-rc.2.23479.6" />
+	  <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
+	  <PackageReference Include="YamlDotNet" Version="13.7.0" />
+  </ItemGroup>
+
+</Project>
