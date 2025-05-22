@@ -3,6 +3,7 @@ using NewLife;
 using Newtonsoft.Json;
 using PdfiumViewer;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
 namespace PrintToImage
@@ -33,38 +34,75 @@ namespace PrintToImage
                         //真转
                         // 指定要处理的PDF文件路径
                         string pdfFilePath = filetemppath;
-                        int baseWidth = 600;
-                        int baseHeight = 600;
+
                         using (PdfDocument pdfDocument = PdfDocument.Load(pdfFilePath))
                         {
-                            int totalWidth = 3 * baseWidth;
-                            int totalHeight =3 * baseHeight;
-                            int pageCount = 9;
-                            if (pageCount >= pdfDocument.PageCount)
-                            {
-                                pageCount = pdfDocument.PageCount;
-                            }
-                            using (Bitmap resultImage = new Bitmap(totalWidth, totalHeight))
+                            // 配置参数
+                            const int gridSize = 3;           // 3x3网格
+                            const int cellSize = 600;         // 每个单元格600x600
+                            const int totalSize = cellSize * gridSize; // 总尺寸1800x1800
+                            const int renderDPI = 300;        // 高精度渲染DPI
+                            const int padding = 4;            // 单元格内边距
+
+                            int pageCount = Math.Min(pdfDocument.PageCount, 9);
+
+                            using (Bitmap resultImage = new Bitmap(totalSize, totalSize))
                             using (Graphics graphics = Graphics.FromImage(resultImage))
                             {
                                 graphics.Clear(Color.White);
+                                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
 
                                 for (int pageIndex = 0; pageIndex < pageCount; pageIndex++)
                                 {
-                                    int row = pageIndex / 3;
-                                    int col = pageIndex % 3;
+                                    // 获取PDF原始页面尺寸（单位：英寸）
+                                    var pageSize = pdfDocument.PageSizes[pageIndex];
 
-                                    using (Bitmap pageThumbnail = (Bitmap)pdfDocument.Render(pageIndex, baseWidth, baseHeight, true))
+                                    // 计算缩放比例（保留原始宽高比）
+                                    float maxContentSize = cellSize - padding * 2;
+                                    float scale = Math.Min(
+                                        maxContentSize / (pageSize.Width * renderDPI / 72f),
+                                        maxContentSize / (pageSize.Height * renderDPI / 72f)
+                                    );
+
+                                    // 计算实际渲染尺寸
+                                    int renderWidth = (int)(pageSize.Width * renderDPI / 72f);
+                                    int renderHeight = (int)(pageSize.Height * renderDPI / 72f);
+
+                                    // 高质量渲染原始页面
+                                    using (var pageImage = (Bitmap)pdfDocument.Render(
+                                        pageIndex,
+                                        renderWidth,
+                                        renderHeight,
+                                        renderDPI,
+                                        renderDPI,
+                                        true))
                                     {
-                                        graphics.DrawImage(pageThumbnail, col * baseWidth, row * baseHeight, baseWidth, totalHeight);
+                                        // 计算目标尺寸（保持比例）
+                                        int targetWidth = (int)(renderWidth * scale);
+                                        int targetHeight = (int)(renderHeight * scale);
+
+                                        // 计算绘制位置（居中显示）
+                                        int row = pageIndex / gridSize;
+                                        int col = pageIndex % gridSize;
+                                        int x = col * cellSize + (cellSize - targetWidth) / 2;
+                                        int y = row * cellSize + (cellSize - targetHeight) / 2;
+
+                                        // 高质量缩放
+                                        using (var scaledImage = new Bitmap(targetWidth, targetHeight))
+                                        using (var g = Graphics.FromImage(scaledImage))
+                                        {
+                                            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                            g.DrawImage(pageImage, 0, 0, targetWidth, targetHeight);
+                                            graphics.DrawImage(scaledImage, x, y);
+                                        }
                                     }
                                 }
-                                
 
+                                // 保存最终图片
                                 // 保存拼接后的图像
                                 resultImage.Save(TempFileUtil.tempPath + $"result_image_{json.id}.png", ImageFormat.Png);
-                                //上传文件到上传链接里
-
                                 using (var client = new HttpClient())
                                 using (var fileStream = File.OpenRead(TempFileUtil.tempPath + $"result_image_{json.id}.png"))
                                 {
@@ -85,9 +123,45 @@ namespace PrintToImage
                                         throw new Exception("转换端文件上传失败，请重试！");
                                     }
                                 }
-
                             }
                         }
+                        // 废弃 2025/05/22 19:24
+                        //int baseWidth = 600;
+                        //int baseHeight = 600;
+                        //using (PdfDocument pdfDocument = PdfDocument.Load(pdfFilePath))
+                        //{
+                        //    int totalWidth = 3 * baseWidth;
+                        //    int totalHeight =3 * baseHeight;
+                        //    int pageCount = 9;
+                        //    if (pageCount >= pdfDocument.PageCount)
+                        //    {
+                        //        pageCount = pdfDocument.PageCount;
+                        //    }
+                        //    using (Bitmap resultImage = new Bitmap(totalWidth, totalHeight))
+                        //    using (Graphics graphics = Graphics.FromImage(resultImage))
+                        //    {
+                        //        graphics.Clear(Color.White);
+
+                        //        for (int pageIndex = 0; pageIndex < pageCount; pageIndex++)
+                        //        {
+                        //            int row = pageIndex / 3;
+                        //            int col = pageIndex % 3;
+
+                        //            using (Bitmap pageThumbnail = (Bitmap)pdfDocument.Render(pageIndex, baseWidth, baseHeight, true))
+                        //            {
+                        //                graphics.DrawImage(pageThumbnail, col * baseWidth, row * baseHeight, baseWidth, totalHeight);
+                        //            }
+                        //        }
+                                
+
+                        //        // 保存拼接后的图像
+                        //        resultImage.Save(TempFileUtil.tempPath + $"result_image_{json.id}.png", ImageFormat.Png);
+                        //        //上传文件到上传链接里
+
+                                
+
+                        //    }
+                        //}
                     }
                     else
                     {
