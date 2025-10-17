@@ -71,6 +71,10 @@ namespace ConvertPDFByMicrosoft
                     case ".bmp":
                         Image2Pdf(sourceFilePath, targetPdfPath);
                         break;
+                    case ".pdf":
+                        // 如果已经是PDF，直接复制
+                        File.Copy(sourceFilePath, targetPdfPath, true);
+                        break;
                     default:
                         throw new NotSupportedException($"不支持的文件格式: {ext}");
                 }
@@ -147,6 +151,7 @@ namespace ConvertPDFByMicrosoft
                 ".pptx" or ".pptm" or ".ppt" => true,
                 ".docx" or ".docm" or ".doc" => true,
                 ".png" or ".jpg" or ".jpeg" or ".tif" or ".tiff" or ".bmp" => true,
+                ".pdf" => true,
                 _ => false
             };
         }
