@@ -1,12 +1,6 @@
 ﻿using NewLife;
-using NewLife.Remoting;
-using NewLife.RocketMQ;
-using NewLife.RocketMQ.Protocol;
-using NewLife.Serialization.Json;
 using Newtonsoft.Json;
-using NLog.Fluent;
-using System.Text;
-using static iTextSharp.text.pdf.AcroFields;
+
 
 namespace PrintToPDFNode
 {
@@ -28,11 +22,10 @@ namespace PrintToPDFNode
                 {
                     // 保存源文件到本地
                     string filetemppath = TempFileUtil.saveFileByUrl(json.fileUrl);
-                    string lastFileName = ToPDF.getLastFileName(filetemppath);
                     ToPdfResp toPdfResp = null;
                     try
                     {
-                        toPdfResp = ToPdfCallBackFactory.getPdfConversion(lastFileName).ConvertToPdf(filetemppath);
+                        toPdfResp = ToPDFV2.ToPdf(filetemppath);
                     }
                     catch (Exception ex)
                     {
@@ -41,15 +34,14 @@ namespace PrintToPDFNode
                             // 捕获转换的异常，保证服务不会异常退出,一般造成转换异常说明该文件无法打印，直接返回错误信息即可!
                             TempFileUtil.removeFile(filetemppath);
                         }catch(Exception) { 
-                        
+                            Console.WriteLine($"删除临时文件异常:{filetemppath}");
                         }
                        
                         PrintDataFromPDFResp prsresp = new PrintDataFromPDFResp();
                         prsresp.id = json.id;
-                        prsresp.message = "该文件无法转换为pdf，请检查文件格式再重试";
+                        prsresp.message = $"该文件无法转换为pdf:{ex.Message}";
                         prsresp.status = 0;
-                        Console.WriteLine("异常:");
-                        Console.Write(ex.Message);
+                        Console.WriteLine($"转pdf异常:{ex.Message}");
                         RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
                     }
                    
@@ -76,7 +68,7 @@ namespace PrintToPDFNode
                                 TempFileUtil.removeFile(toPdfResp.pdfPath);
                                 PrintDataFromPDFResp prsresp1 = new PrintDataFromPDFResp();
                                 prsresp1.id = json.id;
-                                prsresp1.message = "未知异常，请检查文件再次尝试";
+                                prsresp1.message = "topdf:文件上传服务器失败";
                                 prsresp1.status = 0;
                                 RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp1), "resp");
                                 return;
@@ -94,7 +86,8 @@ namespace PrintToPDFNode
                         RocketMQSendCenter.toPDFRespSend.Publish(JsonConvert.SerializeObject(prsresp), "resp");
                         TempFileUtil.removeFile(filetemppath);
                         TempFileUtil.removeFile(toPdfResp.pdfPath);
-                        Console.Write("保存成功");
+                        Console.Write($"tpd:转换成功:id[{json.id}],pageNums[{toPdfResp.pdfPage}]," +
+                            $"filePdfUrl[{json.filePDFUploadUrl}]");
                         //一旦异常会进外面的异常里，否则消费消息
                     }
                 }
